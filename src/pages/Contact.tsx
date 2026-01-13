@@ -27,24 +27,21 @@ const Contact = () => {
       title: t('contact.visit'),
       details: [
         'Registered Office:',
-        '506/507, Ajmera Sikova, 23, Nityanand Nagar, Opp. Damodar Park, Ghatkopar West, Mumbai - 400086.',
-        '',
-        'Head Office:',
-        'Goregoan, Mumbai - 400104.',
+        '506/507, Ajmera Sikova, 23, Nityanand nagar, Opp. Damodar Park, Ghatkopar West, Mumbai - 400086.',
         '',
         'Corporate Office:',
-        'A-308 Privilon b/h Iscon Temple, Iscon Cross Road Ahmedabad - 380015, Gujrat, INDIA'
+        'A-308 Privilon b/h Iscon Temple , Iscon Cross Road Ahmedabad - 380015, Gujrat, INDIA'
       ],
     },
     {
       icon: Phone,
       title: t('contact.call'),
-      details: ['+91 9167369755', '+91 7977299867', '(Call & WhatsApp)'],
+      details: ['+91 9167369755'],
     },
     {
       icon: Mail,
       title: t('contact.email'),
-      details: ['info@tgpharmz.com'],
+      details: ['gjpharmaceuticalsllp@gmail.com'],
     },
     {
       icon: FileText,
@@ -71,6 +68,39 @@ const Contact = () => {
 
   return (
     <PageWrapper>
+      <Seo
+        title="Contact Us"
+        description="Contact GJ PHARMACEUTICALS LLP for high-quality pharmaceutical products. Reach us at our new Mumbai or Ahmedabad offices."
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "GJ PHARMACEUTICALS LLP",
+          "image": "https://tgpharmz.com/new-logo.png",
+          "telephone": "+91 9167369755",
+          "email": "gjpharmaceuticalsllp@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "506/507, Ajmera Sikova, 23, Nityanand nagar, Opp. Damodar Park, Ghatkopar West",
+            "addressLocality": "Mumbai",
+            "addressRegion": "Maharashtra",
+            "postalCode": "400086",
+            "addressCountry": "IN"
+          },
+          "url": "https://tgpharmz.com/contact",
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        }}
+      />
       <Navbar />
 
       {/* Hero Section - Reduced height for better focus on content */}
@@ -96,7 +126,7 @@ const Contact = () => {
             </blockquote>
             <div className="flex flex-col items-center relative z-10">
               <div className="font-bold text-lg text-primary">Dhiraj Rathod</div>
-              <div className="text-slate-500 font-medium">Founder, CEO of TG PHARMZ LLP</div>
+              <div className="text-slate-500 font-medium">Founder, CEO of GJ PHARMACEUTICALS LLP</div>
             </div>
           </div>
         </div>

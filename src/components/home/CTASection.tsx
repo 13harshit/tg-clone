@@ -47,7 +47,7 @@ export const CTASection = () => {
             Ready to Partner with Us?
           </h2>
           <p className="text-white/70 text-lg mb-10 max-w-2xl mx-auto">
-            Join our global network of healthcare partners and experience the TG PHARMZ difference.
+            Join our global network of healthcare partners and experience the GJ PHARMACEUTICALS difference.
             Let's build a healthier world together.
           </p>
 

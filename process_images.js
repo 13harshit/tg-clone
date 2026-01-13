@@ -46,7 +46,7 @@ try {
                 image: `/images/products/showcase/${targetName}`,
                 name: `Product ${index + 1}`,
                 form: "Pharmaceutical",
-                brand: "TG Pharmz",
+                brand: "GJ PHARMACEUTICALS",
                 desc: "Advanced pharmaceutical formulation ensuring high quality and therapeutic efficacy."
             });
         }

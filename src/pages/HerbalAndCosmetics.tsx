@@ -261,7 +261,7 @@ const HerbalAndCosmetics = () => {
                             Where Beauty Meets Nature
                         </h1>
                         <p className="text-emerald-50 mb-6 leading-relaxed">
-                            At TG PHARMZ LLP, we welcome you to a world where beauty meets nature. Our Herbal and Cosmetics line is a harmonious blend of botanical richness and scientific innovation, designed to elevate your skincare and beauty routine. As a premier Manufacturer and Supplier, we immerse you in pure, natural goodness, ensuring our formulations enhance your beauty in the most gentle, effective, and sustainable way.
+                            At GJ PHARMACEUTICALS LLP, we welcome you to a world where beauty meets nature. Our Herbal and Cosmetics line is a harmonious blend of botanical richness and scientific innovation, designed to elevate your skincare and beauty routine. As a premier Manufacturer and Supplier, we immerse you in pure, natural goodness, ensuring our formulations enhance your beauty in the most gentle, effective, and sustainable way.
                         </p>
                     </div>
                 </div>

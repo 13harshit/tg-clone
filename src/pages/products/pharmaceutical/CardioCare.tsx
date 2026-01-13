@@ -121,32 +121,32 @@ const FeaturedProducts = () => {
     const products = [
         {
             name: "Bivalirudine",
-            description: "Discover the power of Cardio Care: Bivalirudine by TG Pharmz. Our Comprehensive Cardiovascular health supplement is expertly formulated to support heart function and overall cardiovascular well-being. Packed with natural ingredients and backed by science, Cardio Care promotes healthy blood circulation, maintains optimal cholesterol levels, and supports heart muscle function. Enhance your heart health today with Cardio Care.",
+            description: "Discover the power of Cardio Care: Bivalirudine by GJ PHARMACEUTICALS. Our Comprehensive Cardiovascular health supplement is expertly formulated to support heart function and overall cardiovascular well-being. Packed with natural ingredients and backed by science, Cardio Care promotes healthy blood circulation, maintains optimal cholesterol levels, and supports heart muscle function. Enhance your heart health today with Cardio Care.",
             link: "/products/pharmaceutical/cardio/bivalirudine"
         },
         {
             name: "Hyaluronidase",
-            description: "Discover the power of Cardio Care: Hyaluronidase by TG Pharmz. Our Comprehensive Cardiovascular health supplement is expertly formulated to support heart function and overall cardiovascular well-being. Packed with natural ingredients and backed by science, Cardio Care promotes healthy blood circulation, maintains optimal cholesterol levels, and supports heart muscle function. Enhance your heart health today with Cardio Care.",
+            description: "Discover the power of Cardio Care: Hyaluronidase by GJ PHARMACEUTICALS. Our Comprehensive Cardiovascular health supplement is expertly formulated to support heart function and overall cardiovascular well-being. Packed with natural ingredients and backed by science, Cardio Care promotes healthy blood circulation, maintains optimal cholesterol levels, and supports heart muscle function. Enhance your heart health today with Cardio Care.",
             link: "/products/pharmaceutical/cardio/hyaluronidase"
         },
         {
             name: "Amphotericin B",
-            description: "Discover the power of Cardio Care: Amphotericin B by TG Pharmz. Our Comprehensive Cardiovascular health supplement is expertly formulated to support heart function and overall cardiovascular well-being. Packed with natural ingredients and backed by science, Cardio Care promotes healthy blood circulation, maintains optimal cholesterol levels, and supports heart muscle function. Enhance your heart health today with Cardio Care.",
+            description: "Discover the power of Cardio Care: Amphotericin B by GJ PHARMACEUTICALS. Our Comprehensive Cardiovascular health supplement is expertly formulated to support heart function and overall cardiovascular well-being. Packed with natural ingredients and backed by science, Cardio Care promotes healthy blood circulation, maintains optimal cholesterol levels, and supports heart muscle function. Enhance your heart health today with Cardio Care.",
             link: "/products/pharmaceutical/cardio/amphotericin-b"
         },
         {
             name: "Vancomycin",
-            description: "Discover the power of Cardio Care: Vancomycin by TG Pharmz. Our Comprehensive Cardiovascular health supplement is expertly formulated to support heart function and overall cardiovascular well-being. Packed with natural ingredients and backed by science, Cardio Care promotes healthy blood circulation, maintains optimal cholesterol levels, and supports heart muscle function. Enhance your heart health today with Cardio Care.",
+            description: "Discover the power of Cardio Care: Vancomycin by GJ PHARMACEUTICALS. Our Comprehensive Cardiovascular health supplement is expertly formulated to support heart function and overall cardiovascular well-being. Packed with natural ingredients and backed by science, Cardio Care promotes healthy blood circulation, maintains optimal cholesterol levels, and supports heart muscle function. Enhance your heart health today with Cardio Care.",
             link: "/products/pharmaceutical/cardio/vancomycin"
         },
         {
             name: "Streptokinase",
-            description: "Discover the power of Cardio Care: Streptokinase by TG Pharmz. Our Comprehensive Cardiovascular health supplement is expertly formulated to support heart function and overall cardiovascular well-being. Packed with natural ingredients and backed by science, Cardio Care promotes healthy blood circulation, maintains optimal cholesterol levels, and supports heart muscle function. Enhance your heart health today with Cardio Care.",
+            description: "Discover the power of Cardio Care: Streptokinase by GJ PHARMACEUTICALS. Our Comprehensive Cardiovascular health supplement is expertly formulated to support heart function and overall cardiovascular well-being. Packed with natural ingredients and backed by science, Cardio Care promotes healthy blood circulation, maintains optimal cholesterol levels, and supports heart muscle function. Enhance your heart health today with Cardio Care.",
             link: "/products/pharmaceutical/cardio/streptokinase"
         },
         {
             name: "Caspofungin",
-            description: "Discover the power of Cardio Care: Caspofungin by TG Pharmz. Our Comprehensive Cardiovascular health supplement is expertly formulated to support heart function and overall cardiovascular well-being. Packed with natural ingredients and backed by science, Cardio Care promotes healthy blood circulation, maintains optimal cholesterol levels, and supports heart muscle function. Enhance your heart health today with Cardio Care.",
+            description: "Discover the power of Cardio Care: Caspofungin by GJ PHARMACEUTICALS. Our Comprehensive Cardiovascular health supplement is expertly formulated to support heart function and overall cardiovascular well-being. Packed with natural ingredients and backed by science, Cardio Care promotes healthy blood circulation, maintains optimal cholesterol levels, and supports heart muscle function. Enhance your heart health today with Cardio Care.",
             link: "/products/pharmaceutical/cardio/caspofungin"
         }
     ];

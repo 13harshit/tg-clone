@@ -85,7 +85,7 @@ const About = () => {
     <PageWrapper>
       <Seo
         title="About Us"
-        description="Learn about TG PHARMZ's history, mission, and commitment to pharmaceutical excellence. WHO-GMP certified manufacturing."
+        description="Learn about GJ PHARMACEUTICALS's history, mission, and commitment to pharmaceutical excellence. WHO-GMP certified manufacturing."
       />
       <Navbar />
 
@@ -106,7 +106,7 @@ const About = () => {
               </span>
               <h1 className="text-4xl sm:text-5xl font-bold text-slate-800 mb-6 leading-tight">
                 {t('aboutPage.welcome')} <br />
-                <span className="text-primary">TG PHARMZ</span>
+                <span className="text-primary">GJ PHARMACEUTICALS</span>
               </h1>
               <p className="text-slate-600 text-lg mb-6 leading-relaxed">
                 {t('aboutPage.intro')}
@@ -130,7 +130,7 @@ const About = () => {
                   <motion.img
                     key={currentImageIndex}
                     src={heroImages[currentImageIndex]}
-                    alt={`TG PHARMZ Facility ${currentImageIndex + 1}`}
+                    alt={`GJ PHARMACEUTICALS Facility ${currentImageIndex + 1}`}
                     className="w-full h-full object-cover absolute inset-0"
                     initial={{ opacity: 0, scale: 1.1 }}
                     animate={{ opacity: 1, scale: 1 }}

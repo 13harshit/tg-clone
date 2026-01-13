@@ -6,18 +6,20 @@ interface SeoProps {
     description?: string;
     keywords?: string;
     image?: string;
+    jsonLd?: Record<string, any> | Record<string, any>[];
 }
 
 const Seo = ({
     title,
-    description = "TG PHARMZ LLP - Leading Pharmaceutical Manufacturer & Exporter. WHO-GMP Certified facilities producing high-quality Tablets, Injections, and more.",
+    description = "GJ PHARMACEUTICALS LLP - Leading Pharmaceutical Manufacturer & Exporter. WHO-GMP Certified facilities producing high-quality Tablets, Injections, and more.",
     keywords = "pharmaceutical, manufacturer, exporter, india, generic medicines, third party manufacturing, pharma franchise",
-    image = "/og-image.jpg"
+    image = "/og-image.jpg",
+    jsonLd
 }: SeoProps) => {
     const { pathname } = useLocation();
     const siteUrl = 'https://tgpharmz.com'; // Replace with actual domain
     const fullUrl = `${siteUrl}${pathname}`;
-    const fullTitle = `${title} | TG PHARMZ`;
+    const fullTitle = `${title} | GJ PHARMACEUTICALS`;
 
     return (
         <Helmet>
@@ -40,6 +42,13 @@ const Seo = ({
             <meta property="twitter:title" content={fullTitle} />
             <meta property="twitter:description" content={description} />
             <meta property="twitter:image" content={image} />
+
+            {/* Structured Data (JSON-LD) for SEO/AEO/GEO */}
+            {jsonLd && (
+                <script type="application/ld+json">
+                    {JSON.stringify(jsonLd)}
+                </script>
+            )}
         </Helmet>
     );
 };

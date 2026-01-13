@@ -36,7 +36,40 @@ const Index = () => {
     <PageWrapper>
       <Seo
         title="Home"
-        description="TG PHARMZ LLP - Leading Pharmaceutical Manufacturer & Exporter. High-quality tablets, injections, and healthcare products."
+        description="GJ PHARMACEUTICALS LLP - Leading Pharmaceutical Manufacturer & Exporter. High-quality tablets, injections, and healthcare products."
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "GJ PHARMACEUTICALS LLP",
+            "url": "https://tgpharmz.com",
+            "logo": "https://tgpharmz.com/new-logo.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+91-9167369755",
+              "contactType": "customer service",
+              "areaServed": "IN",
+              "availableLanguage": "en"
+            },
+            "sameAs": [
+              "https://facebook.com",
+              "https://twitter.com",
+              "https://linkedin.com",
+              "https://instagram.com"
+            ]
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "GJ PHARMACEUTICALS",
+            "url": "https://tgpharmz.com",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://tgpharmz.com/search?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        ]}
       />
       <Navbar />
 
@@ -69,10 +102,10 @@ const Index = () => {
               </div>
 
               <h1 className="text-6xl font-extrabold text-primary leading-tight mb-2">
-                TG
+                GJ
               </h1>
-              <h1 className="text-5xl font-extrabold text-primary leading-tight mb-4">
-                PHARMZ
+              <h1 className="text-3xl md:text-5xl font-extrabold text-primary leading-tight mb-4 text-nowrap">
+                PHARMACEUTICALS
               </h1>
               <h2 className="text-2xl font-semibold text-slate-700 mb-6">
                 LLP

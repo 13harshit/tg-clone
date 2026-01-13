@@ -31,7 +31,7 @@ const Gentamicin = () => {
                             {/* Product Introduction */}
                             <div>
                                 <p className="text-slate-600 leading-relaxed text-lg">
-                                    Discover the power of Pharmaceutical Injections: <strong>Gentamicin 30 ml injection</strong> by TG Pharmz. We are dedicated to delivering top-quality pharmaceutical injections that meet global standards of excellence. With a commitment to innovation, quality, and customer satisfaction, we strive to be your trusted partner in healthcare.
+                                    Discover the power of Pharmaceutical Injections: <strong>Gentamicin 30 ml injection</strong> by GJ PHARMACEUTICALS. We are dedicated to delivering top-quality pharmaceutical injections that meet global standards of excellence. With a commitment to innovation, quality, and customer satisfaction, we strive to be your trusted partner in healthcare.
                                 </p>
                             </div>
 
@@ -53,7 +53,7 @@ const Gentamicin = () => {
                                         </tr>
                                         <tr>
                                             <th className="p-4 bg-secondary/5 font-semibold text-slate-700">Manufacturer</th>
-                                            <td className="p-4 text-slate-600">TG Pharmz</td>
+                                            <td className="p-4 text-slate-600">GJ PHARMACEUTICALS</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -110,7 +110,7 @@ const Gentamicin = () => {
                             <div>
                                 <h3 className="text-xl font-bold text-slate-900 mb-4">Quality Assurance:</h3>
                                 <p className="text-slate-600 leading-relaxed border-l-4 border-primary pl-4 py-2 bg-secondary/5 rounded-r-lg">
-                                    TG Pharmz follows strict quality control measures to ensure that <strong>Gentamicin 30 ml injection</strong> meets the highest standards of safety, purity, and efficacy. Our manufacturing facilities adhere to Good Manufacturing Practices (GMP) guidelines, and each batch undergoes rigorous testing for quality and consistency.
+                                    GJ PHARMACEUTICALS follows strict quality control measures to ensure that <strong>Gentamicin 30 ml injection</strong> meets the highest standards of safety, purity, and efficacy. Our manufacturing facilities adhere to Good Manufacturing Practices (GMP) guidelines, and each batch undergoes rigorous testing for quality and consistency.
                                 </p>
                             </div>
 
