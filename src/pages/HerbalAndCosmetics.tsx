@@ -239,7 +239,7 @@ const HerbalAndCosmetics = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-emerald-50 font-sans text-slate-900">
+        <div className="min-h-screen font-sans text-slate-900">
             <Navbar />
 
             {/* Hero Section */}
@@ -253,14 +253,14 @@ const HerbalAndCosmetics = () => {
                             fetchPriority="high"
                         />
                     </div>
-                    <div className="lg:w-1/2 p-8 lg:p-12 bg-emerald-900 text-white flex flex-col justify-center">
+                    <div className="lg:w-1/2 p-8 lg:p-12 bg-secondary text-white flex flex-col justify-center">
                         <span className="inline-block px-3 py-1 bg-emerald-700 rounded-full text-xs font-bold tracking-wider mb-4 w-fit">
                             Herbal and Cosmetics
                         </span>
                         <h1 className="text-3xl lg:text-4xl font-bold mb-6">
                             Where Beauty Meets Nature
                         </h1>
-                        <p className="text-emerald-100 mb-6 leading-relaxed">
+                        <p className="text-emerald-50 mb-6 leading-relaxed">
                             At TG PHARMZ LLP, we welcome you to a world where beauty meets nature. Our Herbal and Cosmetics line is a harmonious blend of botanical richness and scientific innovation, designed to elevate your skincare and beauty routine. As a premier Manufacturer and Supplier, we immerse you in pure, natural goodness, ensuring our formulations enhance your beauty in the most gentle, effective, and sustainable way.
                         </p>
                     </div>
@@ -271,8 +271,8 @@ const HerbalAndCosmetics = () => {
             <div className="container mx-auto px-4 py-12">
                 <div className="grid md:grid-cols-2 gap-8">
                     {/* Feature 1 */}
-                    <div className="bg-white p-8 rounded-2xl shadow-lg border border-emerald-100">
-                        <h2 className="text-2xl font-bold text-emerald-800 mb-4 flex items-center gap-3">
+                    <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-secondary/20">
+                        <h2 className="text-2xl font-bold text-secondary mb-4 flex items-center gap-3">
                             <Leaf className="w-6 h-6" />
                             The Fusion of Nature & Science
                         </h2>
@@ -283,7 +283,7 @@ const HerbalAndCosmetics = () => {
                                 { title: "Safety First", desc: "All formulations are dermatologically tested, paraben-free, and free from harsh chemicals, ensuring they are safe for sensitive skin." }
                             ].map((item, i) => (
                                 <li key={i} className="flex gap-3">
-                                    <CheckCircle2 className="w-5 h-5 text-emerald-600 mt-0.5 shrink-0" />
+                                    <CheckCircle2 className="w-5 h-5 text-secondary mt-0.5 shrink-0" />
                                     <div>
                                         <h4 className="font-bold text-slate-800">{item.title}</h4>
                                         <p className="text-sm text-slate-600">{item.desc}</p>
@@ -294,8 +294,8 @@ const HerbalAndCosmetics = () => {
                     </div>
 
                     {/* Feature 2 */}
-                    <div className="bg-white p-8 rounded-2xl shadow-lg border border-emerald-100">
-                        <h2 className="text-2xl font-bold text-emerald-800 mb-4 flex items-center gap-3">
+                    <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-secondary/20">
+                        <h2 className="text-2xl font-bold text-secondary mb-4 flex items-center gap-3">
                             <Sprout className="w-6 h-6" />
                             Our Product Categories
                         </h2>
@@ -307,7 +307,7 @@ const HerbalAndCosmetics = () => {
                                 { title: "Specialty Treatments", desc: "Targeted formulations for acne, pigmentation, and dry skin conditions using the power of nature." }
                             ].map((item, i) => (
                                 <li key={i} className="flex gap-3">
-                                    <CheckCircle2 className="w-5 h-5 text-emerald-600 mt-0.5 shrink-0" />
+                                    <CheckCircle2 className="w-5 h-5 text-secondary mt-0.5 shrink-0" />
                                     <div>
                                         <h4 className="font-bold text-slate-800">{item.title}</h4>
                                         <p className="text-sm text-slate-600">{item.desc}</p>
@@ -321,16 +321,16 @@ const HerbalAndCosmetics = () => {
 
             {/* Product Tabs & Table */}
             <div className="container mx-auto px-4 pb-20">
-                <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-emerald-100">
+                <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl overflow-hidden border border-secondary/20">
                     {/* Tab Navigation */}
-                    <div className="flex flex-wrap gap-2 p-4 bg-emerald-50 border-b border-emerald-100">
+                    <div className="flex flex-wrap gap-2 p-4 bg-secondary/5 border-b border-secondary/10">
                         {Object.keys(productData).map((tab) => (
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
                                 className={`px-4 py-2 rounded-lg text-sm font-bold transition-all duration-200 border ${activeTab === tab
-                                    ? "bg-emerald-600 text-white border-emerald-600 shadow-md transform scale-105"
-                                    : "bg-white text-emerald-800 border-emerald-200 hover:bg-emerald-100"
+                                    ? "bg-secondary text-white border-secondary shadow-md transform scale-105"
+                                    : "bg-white text-secondary border-secondary/20 hover:bg-secondary/10"
                                     }`}
                             >
                                 {tab}
@@ -341,11 +341,11 @@ const HerbalAndCosmetics = () => {
                     {/* Table Content */}
                     <div className="p-6 overflow-x-auto">
                         <div className="mb-4">
-                            <h3 className="text-xl font-bold text-emerald-900 border-l-4 border-emerald-500 pl-3">
+                            <h3 className="text-xl font-bold text-secondary border-l-4 border-primary pl-3">
                                 {productData[activeTab].title}
                             </h3>
                             {productData[activeTab].note && (
-                                <p className="text-sm text-emerald-600 mt-1 italic">
+                                <p className="text-sm text-secondary/80 mt-1 italic">
                                     {productData[activeTab].note}
                                 </p>
                             )}
@@ -353,19 +353,20 @@ const HerbalAndCosmetics = () => {
 
                         <table className="w-full text-left border-collapse min-w-[600px]">
                             <thead>
-                                <tr className="bg-emerald-900 text-white">
+                                <tr className="bg-secondary text-white">
                                     <th className="p-4 rounded-tl-lg w-16">Sr.No.</th>
                                     <th className="p-4">Product Name</th>
                                     <th className="p-4 rounded-tr-lg">Packing Size</th>
                                 </tr>
                             </thead>
-                            <tbody className="divide-y divide-emerald-100">
+
+                            <tbody className="divide-y divide-secondary/10">
                                 {productData[activeTab].items.map((item, index) => (
                                     <tr
                                         key={index}
-                                        className="hover:bg-emerald-50 transition-colors"
+                                        className="hover:bg-secondary/5 transition-colors"
                                     >
-                                        <td className="p-4 font-medium text-emerald-900">{item.sno}</td>
+                                        <td className="p-4 font-medium text-secondary">{item.sno}</td>
                                         <td className="p-4 font-bold text-slate-800">{item.name}</td>
                                         <td className="p-4 text-slate-600 text-sm">
                                             {item.packing || <span className="text-slate-400 italic">--</span>}
@@ -379,7 +380,7 @@ const HerbalAndCosmetics = () => {
             </div>
 
             <Footer />
-        </div>
+        </div >
     );
 };
 

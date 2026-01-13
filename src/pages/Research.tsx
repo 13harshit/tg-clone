@@ -83,7 +83,7 @@ const Research = () => {
       </section>
 
       {/* Research Areas */}
-      <section className="py-20 bg-background">
+      <section className="py-20">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

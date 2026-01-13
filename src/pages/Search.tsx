@@ -60,7 +60,7 @@ const Search = () => {
     }, [query]);
 
     return (
-        <PageWrapper className="bg-slate-50">
+        <PageWrapper>
             <Seo
                 title={`Search Results for "${query}"`}
                 description="Search results for TG PHARMZ website."

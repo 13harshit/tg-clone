@@ -5,7 +5,7 @@ import { ShieldCheck, FileCheck } from 'lucide-react';
 
 const Certification = () => {
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen">
             <Navbar />
 
             {/* Hero Section */}
@@ -30,7 +30,7 @@ const Certification = () => {
                                 transition={{ duration: 0.6 }}
                                 className="bg-black/80 backdrop-blur-md p-8 md:p-10 rounded-3xl border border-white/10 shadow-2xl"
                             >
-                                <h1 className="text-3xl md:text-4xl font-bold text-[#FF6B00] mb-6">
+                                <h1 className="text-3xl md:text-4xl font-bold text-primary mb-6">
                                     Certification
                                 </h1>
                                 <p className="text-white text-lg leading-relaxed font-medium">
@@ -43,7 +43,7 @@ const Certification = () => {
             </section>
 
             {/* Certified Commitment Section */}
-            <section className="py-16 bg-white">
+            <section className="py-16">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -58,7 +58,7 @@ const Certification = () => {
                         <div className="space-y-8">
                             <div className="flex gap-4 items-start">
                                 <div className="min-w-6 mt-1">
-                                    <ShieldCheck className="w-6 h-6 text-[#FF6B00]" />
+                                    <ShieldCheck className="w-6 h-6 text-primary" />
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-bold text-slate-800 inline">ISO Certifications: </h3>
@@ -70,7 +70,7 @@ const Certification = () => {
 
                             <div className="flex gap-4 items-start">
                                 <div className="min-w-6 mt-1">
-                                    <FileCheck className="w-6 h-6 text-teal-600" />
+                                    <FileCheck className="w-6 h-6 text-secondary" />
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-bold text-slate-800 inline">FDA Approval: </h3>

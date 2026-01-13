@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 
 const FoodGrains = () => {
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen">
             <Navbar />
 
             {/* Hero Section */}

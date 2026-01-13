@@ -31,10 +31,10 @@ const Suppository = () => {
         <div className="min-h-screen flex flex-col">
             <Navbar />
             <main className="flex-grow">
-                <section className="relative pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+                <section className="relative pt-32 pb-20">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl mx-auto text-center">
-                            <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full mb-6">
+                            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
                                 <Pill className="w-4 h-4" />
                                 <span className="text-sm font-semibold">Alternative Dosage Form</span>
                             </div>
@@ -44,16 +44,16 @@ const Suppository = () => {
                     </div>
                 </section>
 
-                <section className="py-20 bg-white">
+                <section className="py-20">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-6xl mx-auto">
-                            <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                                <div className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-6">
+                            <div className="bg-white/60 backdrop-blur-md rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                                <div className="bg-gradient-to-r from-secondary to-primary px-8 py-6">
                                     <h2 className="text-2xl font-bold text-white">Suppository Product List</h2>
                                 </div>
                                 <div className="overflow-x-auto">
                                     <table className="w-full">
-                                        <thead className="bg-slate-50 border-b-2 border-slate-200">
+                                        <thead className="bg-secondary/5 border-b-2 border-slate-200">
                                             <tr>
                                                 <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">S.No.</th>
                                                 <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Product Name</th>
@@ -62,7 +62,7 @@ const Suppository = () => {
                                         </thead>
                                         <tbody className="divide-y divide-slate-100">
                                             {products.map((product, index) => (
-                                                <motion.tr key={product.sno} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.02 }} className="hover:bg-purple-50 transition-colors">
+                                                <motion.tr key={product.sno} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.02 }} className="hover:bg-primary/5 transition-colors">
                                                     <td className="px-6 py-4 text-sm text-slate-600">{product.sno}</td>
                                                     <td className="px-6 py-4 text-sm font-medium text-slate-900">{product.name}</td>
                                                     <td className="px-6 py-4 text-sm text-slate-600">{product.packing}</td>

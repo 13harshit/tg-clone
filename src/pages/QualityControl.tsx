@@ -23,11 +23,11 @@ const qualityPoints = [
 
 const QualityControl = () => {
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen">
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative pt-32 pb-20 overflow-hidden bg-white">
+            <section className="relative pt-32 pb-20 overflow-hidden">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="relative rounded-3xl overflow-hidden min-h-[600px] shadow-2xl flex flex-col md:flex-row">
 
@@ -42,7 +42,7 @@ const QualityControl = () => {
                         </div>
 
                         {/* Content Section - Styled as the dark green card overlapping or adjacent */}
-                        <div className="md:w-2/5 bg-[#1B3C1B] p-8 md:p-12 flex flex-col justify-center relative">
+                        <div className="md:w-2/5 bg-secondary p-8 md:p-12 flex flex-col justify-center relative">
                             {/* Overlap effect for desktop if desired, but side-by-side works well too. 
                    To match the screenshot's 'floating card' look more closely, we can adjust.
                    Let's keep it side-by-side for responsiveness but style the container seamlessly. 
@@ -68,10 +68,10 @@ const QualityControl = () => {
                                             transition={{ delay: index * 0.1 }}
                                             className="flex flex-col gap-1"
                                         >
-                                            <span className="text-[#FF6B00] font-bold text-lg">
+                                            <span className="text-primary font-bold text-lg">
                                                 • {point.title}:
                                             </span>
-                                            <span className="text-[#FF6B00] font-normal text-base leading-relaxed pl-4">
+                                            <span className="text-primary font-normal text-base leading-relaxed pl-4">
                                                 {/* The user's screenshot shows the text following the title is also orange/colored, 
                              or strictly speaking, the title is bold orange and the rest is orange-ish text. 
                              Looking closely at the image: 
@@ -79,7 +79,7 @@ const QualityControl = () => {
                              - Description text appears to be a slightly lighter/gold color, definitely not white.
                              I will use a matching orange-gold shade.
                          */}
-                                                <span className="text-orange-300/90"> {point.description}</span>
+                                                <span className="text-orange-200/90"> {point.description}</span>
                                             </span>
                                         </motion.li>
                                     ))}

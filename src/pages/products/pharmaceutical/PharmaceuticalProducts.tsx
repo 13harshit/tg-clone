@@ -81,13 +81,13 @@ const PharmaceuticalProducts = () => {
                             className="text-center max-w-4xl mx-auto"
                         >
                             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-2 rounded-full mb-6">
-                                <Pill className="w-4 h-4 text-[#FF6B00]" />
+                                <Pill className="w-4 h-4 text-primary" />
                                 <span className="text-sm font-semibold tracking-wide">Pharmaceutical Excellence</span>
                             </div>
 
                             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                                 Pharmaceutical Products <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B00] to-orange-400">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">
                                     at TG PHARMZ
                                 </span>
                             </h1>
@@ -106,7 +106,7 @@ const PharmaceuticalProducts = () => {
                                     <span className="text-sm font-medium text-white">USFDA Approved</span>
                                 </div>
                                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 px-6 py-3 rounded-full">
-                                    <div className="w-2 h-2 bg-[#FF6B00] rounded-full shadow-[0_0_10px_rgba(255,107,0,0.5)]"></div>
+                                    <div className="w-2 h-2 bg-primary rounded-full shadow-[0_0_10px_rgba(var(--primary),0.5)]"></div>
                                     <span className="text-sm font-medium text-white">ISO Certified</span>
                                 </div>
                             </div>
@@ -115,11 +115,11 @@ const PharmaceuticalProducts = () => {
                 </section>
 
                 {/* Product Categories Grid */}
-                <section className="py-20 bg-white">
+                <section className="py-20">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-16">
                             <h2 className="text-4xl font-bold text-slate-900 mb-4">Our Product Categories</h2>
-                            <div className="w-20 h-1 bg-[#FF6B00] mx-auto rounded-full mb-6"></div>
+                            <div className="w-20 h-1 bg-primary mx-auto rounded-full mb-6"></div>
                             <p className="text-slate-600 max-w-2xl mx-auto">
                                 Explore our diverse pharmaceutical portfolio designed to meet global healthcare needs
                             </p>
@@ -137,8 +137,8 @@ const PharmaceuticalProducts = () => {
                                     className="group"
                                 >
                                     <Link to={category.link}>
-                                        <div className="bg-white rounded-[2rem] p-8 flex flex-col items-center text-center shadow-lg border border-slate-100 h-full cursor-pointer transition-all duration-300 hover:border-blue-200">
-                                            <div className="w-24 h-24 rounded-full border-2 border-slate-200 flex items-center justify-center mb-6 text-slate-600 group-hover:border-blue-400 group-hover:bg-blue-50 transition-all duration-300">
+                                        <div className="bg-white rounded-[2rem] p-8 flex flex-col items-center text-center shadow-lg border border-slate-100 h-full cursor-pointer transition-all duration-300 hover:border-primary/50">
+                                            <div className="w-24 h-24 rounded-full border-2 border-slate-200 flex items-center justify-center mb-6 text-slate-600 group-hover:border-primary group-hover:bg-primary/5 transition-all duration-300">
                                                 {category.icon}
                                             </div>
 
@@ -150,7 +150,7 @@ const PharmaceuticalProducts = () => {
                                                 {category.description}
                                             </p>
 
-                                            <div className="inline-flex items-center text-blue-600 font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                                            <div className="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform">
                                                 View Products <ArrowRight className="w-4 h-4 ml-1" />
                                             </div>
                                         </div>
@@ -306,8 +306,284 @@ const PharmaceuticalProducts = () => {
                     </div>
                 </section>
 
+                {/* Featured Products Showcase */}
+                <section className="py-20 bg-slate-50 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100/50 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+                    <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-100/50 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
+
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="text-center mb-16">
+                            <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="inline-block"
+                            >
+                                <h2 className="text-4xl font-bold text-slate-900 mb-4">Featured Products Showcase</h2>
+                                <div className="w-24 h-1 bg-gradient-to-r from-secondary to-primary mx-auto rounded-full mb-6"></div>
+                                <p className="text-slate-600 max-w-2xl mx-auto">
+                                    Discover our comprehensive portfolio of {137} specialized pharmaceutical formulations
+                                </p>
+                            </motion.div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {[
+                                {
+                                    image: "/images/products/showcase/product-1.png",
+                                    name: "LAVICA-M",
+                                    form: "Capsules",
+                                    brand: "Zymeth Wellness",
+                                    desc: "Pregabalin & Methylcobalamin capsules for effective neuropathic pain relief and nerve regeneration support."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-2.png",
+                                    name: "HEPVIT",
+                                    form: "Tablets",
+                                    brand: "Hepvit",
+                                    desc: "Silymarin & Lecithin supplement for liver protection, lipid metabolism support, and hepatic wellness."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-3.png",
+                                    name: "ESMOCURE",
+                                    form: "Injection",
+                                    brand: "Protech Telelinks",
+                                    desc: "Esomeprazole sodium injection for effective acid suppression when oral intake is not possible."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-4.png",
+                                    name: "PROZYME",
+                                    form: "Tablets",
+                                    brand: "Prozyme",
+                                    desc: "Probiotic supplement with live beneficial microorganisms for digestive balance and immune support."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-5.jpg",
+                                    name: "DERMOVEATE",
+                                    form: "Cream",
+                                    brand: "Arkay Remedies",
+                                    desc: "Clobetasol Propionate cream for rapid relief from severe inflammation, itching, and skin conditions."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-6.jpg",
+                                    name: "VITAMIN C EFFERVESCENT",
+                                    form: "Tablets (1000mg)",
+                                    brand: "Santa - C",
+                                    desc: "High-dose Vitamin C effervescent tablets for immune support, collagen synthesis, and antioxidant protection."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-7.jpg",
+                                    name: "TOBRAMYCIN",
+                                    form: "Injection",
+                                    brand: "Health Biotech Lmt",
+                                    desc: "Sterile antibiotic injection for treating serious bacterial infections caused by gram-negative organisms."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-8.jpg",
+                                    name: "AZINOVEET",
+                                    form: "Suspension",
+                                    brand: "Quest Laboratories",
+                                    desc: "Azithromycin oral suspension effective against respiratory, skin, and ENT bacterial infections."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-9.jpg",
+                                    name: "CEFTRIAXONE",
+                                    form: "Injection",
+                                    brand: "Aarge Healthcraft",
+                                    desc: "Broad-spectrum cephalosporin antibiotic for severe respiratory, urinary, and systemic infections."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-10.jpg",
+                                    name: "BIOMOL",
+                                    form: "Tablets",
+                                    brand: "Biomol Joint",
+                                    desc: "Paracetamol 500mg tablets for quick and effective relief from pain and fever."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-11.jpg",
+                                    name: "LEVOFLOXACIN",
+                                    form: "Tablets",
+                                    brand: "Levoeen 500",
+                                    desc: "Broad-spectrum fluoroquinolone antibiotic for respiratory, urinary, and skin infections."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-12.jpg",
+                                    name: "PANTOPRAZOLE",
+                                    form: "Tablets",
+                                    brand: "Pantoeen 40",
+                                    desc: "Pantoprazole 40mg tablets for long-term relief from acidity, heartburn, and GERD."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-13.jpg",
+                                    name: "CALCIUM CITRATE MALATE",
+                                    form: "Tablets",
+                                    brand: "Calz-D3 Max",
+                                    desc: "Highly bioavailable calcium supplement with Vitamin D3 for bone health and osteoporosis prevention."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-14.jpg",
+                                    name: "CORA - CAL 1000",
+                                    form: "Tablets",
+                                    brand: "Cora-Cal1000",
+                                    desc: "Coral calcium supplement with trace minerals for bone density and neuromuscular health."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-15.jpg",
+                                    name: "DROTEEN 40",
+                                    form: "Tablets",
+                                    brand: "Quest Laboratories",
+                                    desc: "Drotaverine Hydrochloride 40mg antispasmodic for relief from smooth muscle spasms and pain."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-16.jpg",
+                                    name: "CORTICOSTEROID",
+                                    form: "Injection",
+                                    brand: "Vhermann Pharma",
+                                    desc: "Injectable corticosteroid for rapid relief from inflammation, arthritis, and allergic reactions."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-17.jpg",
+                                    name: "NERV-PLEX",
+                                    form: "Tablets",
+                                    brand: "Goldplus Universal",
+                                    desc: "Neurotropic vitamins and antioxidant blend to support nerve function and reduce neuropathic pain."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-18.jpg",
+                                    name: "MEGACAL K2",
+                                    form: "Tablets",
+                                    brand: "Megacal K2",
+                                    desc: "Calcium & Vitamin K2 supplement to support bone mineralization and arterial health."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-19.jpg",
+                                    name: "CEFUTUM",
+                                    form: "Injection",
+                                    brand: "Cefutum",
+                                    desc: "Cefuroxime Sodium injection for treating bacterial infections of respiratory tract, skin, and bones."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-20.jpg",
+                                    name: "AITHAL",
+                                    form: "Gel",
+                                    brand: "Unijules Life Sciences",
+                                    desc: "Topical wound healing gel tailored for diabetic ulcers and preventing hypertrophic scarring."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-21.jpg",
+                                    name: "LIDODENT",
+                                    form: "Injection",
+                                    brand: "GJ Pharmaceutical",
+                                    desc: "Lidocaine HCl local anesthetic injection for pain relief during dental and minor surgical procedures."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-22.jpg",
+                                    name: "BIOMOXSALB",
+                                    form: "Injection",
+                                    brand: "Health Biotech",
+                                    desc: "Amoxicillin & Sulbactam injection for potent broad-spectrum activity against resistant bacteria."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-23.jpg",
+                                    name: "ARKCEF",
+                                    form: "Injection",
+                                    brand: "Potech Telelinks",
+                                    desc: "Ceftriaxone injection for fast therapeutic effect in acute and life-threatening bacterial infections."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-24.jpg",
+                                    name: "NERV-PLEX",
+                                    form: "Tablets",
+                                    brand: "Goldplus Universal",
+                                    desc: "Premium multivitamin with Methylcobalamin and Alpha-Lipoic Acid for comprehensive nerve health."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-25.jpg",
+                                    name: "WILLFERTIL",
+                                    form: "Capsules",
+                                    brand: "Pharma-Connective",
+                                    desc: "Male fertility support with L-Carnitine, CoQ10, and Zinc to enhance sperm motility and vitality."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-26.jpg",
+                                    name: "BIOSALB",
+                                    form: "Injection",
+                                    brand: "Health Biotech",
+                                    desc: "Ampicillin & Sulbactam combination for serious infections including gynecological and intra-abdominal."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-27.jpg",
+                                    name: "ABHIGRA-100",
+                                    form: "Oral Jelly",
+                                    brand: "Abhiflax Pharma",
+                                    desc: "Sildenafil Citrate 100mg oral jelly for rapid absorption and effective treatment of ED."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-28.jpg",
+                                    name: "APPLE CIDER",
+                                    form: "Tablets",
+                                    brand: "GDM Nutraceuticals",
+                                    desc: "Apple Cider Vinegar tablets for metabolic support without the harsh taste of liquid vinegar."
+                                },
+                                {
+                                    image: "/images/products/showcase/product-29.jpg",
+                                    name: "METRONIDAZOLE",
+                                    form: "Infusion",
+                                    brand: "Arkmetro",
+                                    desc: "Metronidazole IV infusion for treatment of anaerobic bacterial and protozoal infections."
+                                },
+                                ...Array.from({ length: 137 - 29 }, (_, i) => ({
+                                    image: `/images/products/showcase/product-${i + 30}.jpg`,
+                                    name: `Pharmaceutical Product ${i + 30}`,
+                                    form: "Pharmaceutical",
+                                    brand: "TG Pharmz",
+                                    desc: "Advanced pharmaceutical formulation ensuring high quality and therapeutic efficacy."
+                                }))
+                            ].map((product, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 20 }} // Changed from scale to y-fade for cleaner entrance
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.05 }}
+                                    className="group cursor-pointer" // Removed card styling
+                                >
+                                    {/* Image Container - Aspect Ratio */}
+                                    <div className="aspect-[4/5] bg-slate-100 relative overflow-hidden mb-5 rounded-sm">
+                                        <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/5 transition-colors duration-300 z-10"></div>
+                                        <img
+                                            src={product.image}
+                                            alt={product.name}
+                                            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
+                                            onError={(e) => {
+                                                const target = e.target as HTMLImageElement;
+                                                target.src = "https://placehold.co/400x500?text=No+Image";
+                                            }}
+                                        />
+                                    </div>
+
+                                    {/* Text Content - Below Image */}
+                                    <div className="space-y-1">
+                                        <h3 className="text-2xl font-bold text-slate-800 group-hover:text-primary transition-colors duration-300">
+                                            {product.name}
+                                        </h3>
+
+                                        <div className="flex flex-wrap items-center gap-2 text-sm text-slate-500 font-medium">
+                                            <span className="uppercase tracking-wider text-slate-900">{product.form}</span>
+                                            <span className="w-1 h-1 bg-slate-300 rounded-full"></span>
+                                            <span className="text-slate-400">{product.brand}</span>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+
+
                 {/* Quality Assurance Section */}
-                <section className="py-20 bg-slate-50">
+                <section className="py-20">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-4xl mx-auto">
                             <motion.div

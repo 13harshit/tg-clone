@@ -51,7 +51,7 @@ const SalesDistribution = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen">
             <Navbar />
 
             {/* Hero Section */}
@@ -81,7 +81,7 @@ const SalesDistribution = () => {
                             className="w-full lg:w-2/5 lg:-ml-20 mt-[-3rem] lg:mt-0 relative z-20"
                         >
                             <div className="bg-white p-8 md:p-10 rounded-3xl shadow-2xl border border-slate-100">
-                                <h1 className="text-3xl md:text-4xl font-bold text-[#FF6B00] mb-6">
+                                <h1 className="text-3xl md:text-4xl font-bold text-primary mb-6">
                                     Sales & Distribution Network
                                 </h1>
                                 <p className="text-slate-600 font-medium leading-relaxed">
@@ -94,7 +94,7 @@ const SalesDistribution = () => {
             </section>
 
             {/* Intro Text / Mission */}
-            <section className="py-20 bg-background">
+            <section className="py-20">
                 <div className="container-custom">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -120,7 +120,7 @@ const SalesDistribution = () => {
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
                                 whileHover={{ y: -5 }}
-                                className="flex items-start gap-6 p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-lg transition-all"
+                                className="flex items-start gap-6 p-8 rounded-2xl bg-white/60 backdrop-blur-sm border border-slate-100 shadow-sm hover:shadow-lg transition-all"
                             >
                                 <div className={`shrink-0 w-14 h-14 rounded-xl flex items-center justify-center ${feature.color}`}>
                                     <feature.icon className="w-7 h-7" />

@@ -31,10 +31,10 @@ const IVFluids = () => {
         <div className="min-h-screen flex flex-col">
             <Navbar />
             <main className="flex-grow">
-                <section className="relative pt-32 pb-20 bg-gradient-to-br from-blue-50 via-white to-cyan-50">
+                <section className="relative pt-32 pb-20">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl mx-auto text-center">
-                            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-6">
+                            <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full mb-6">
                                 <Droplet className="w-4 h-4" />
                                 <span className="text-sm font-semibold">Intravenous Solutions</span>
                             </div>
@@ -44,16 +44,16 @@ const IVFluids = () => {
                     </div>
                 </section>
 
-                <section className="py-20 bg-white">
+                <section className="py-20">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-6xl mx-auto">
-                            <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                                <div className="bg-gradient-to-r from-blue-600 to-cyan-600 px-8 py-6">
+                            <div className="bg-white/60 backdrop-blur-md rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                                <div className="bg-gradient-to-r from-secondary to-primary px-8 py-6">
                                     <h2 className="text-2xl font-bold text-white">IV Fluids Product List</h2>
                                 </div>
                                 <div className="overflow-x-auto">
                                     <table className="w-full">
-                                        <thead className="bg-slate-50 border-b-2 border-slate-200">
+                                        <thead className="bg-secondary/5 border-b-2 border-slate-200">
                                             <tr>
                                                 <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">S.No.</th>
                                                 <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Product Name</th>
@@ -62,7 +62,7 @@ const IVFluids = () => {
                                         </thead>
                                         <tbody className="divide-y divide-slate-100">
                                             {products.map((product, index) => (
-                                                <motion.tr key={product.sno} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.02 }} className="hover:bg-blue-50 transition-colors">
+                                                <motion.tr key={product.sno} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.02 }} className="hover:bg-secondary/5 transition-colors">
                                                     <td className="px-6 py-4 text-sm text-slate-600">{product.sno}</td>
                                                     <td className="px-6 py-4 text-sm font-medium text-slate-900">{product.name}</td>
                                                     <td className="px-6 py-4 text-sm text-slate-600">{product.volume}</td>
@@ -77,14 +77,14 @@ const IVFluids = () => {
                 </section>
 
                 {/* Featured Product Section */}
-                <section className="py-20 bg-slate-50">
+                <section className="py-20">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="w-full bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
+                        <div className="w-full bg-white/60 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden border border-slate-100">
                             <div className="flex flex-col md:flex-row items-center">
                                 {/* Product Image */}
-                                <div className="md:w-1/2 p-8 md:p-12 bg-slate-50 flex items-center justify-center border-r border-slate-100">
+                                <div className="md:w-1/2 p-8 md:p-12 bg-secondary/5 flex items-center justify-center border-r border-slate-100">
                                     <div className="relative w-full max-w-lg">
-                                        <div className="absolute inset-0 bg-blue-200 rounded-full blur-3xl opacity-30 transform scale-110"></div>
+                                        <div className="absolute inset-0 bg-secondary/20 rounded-full blur-3xl opacity-30 transform scale-110"></div>
                                         <img
                                             src="/medicine/ChatGPT Image Jan 6, 2026, 02_26_12 PM.png"
                                             alt="Premium IV Infusion"
@@ -96,8 +96,8 @@ const IVFluids = () => {
                                 {/* Product Details */}
                                 <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
                                     <div className="mb-6">
-                                        <div className="inline-block px-4 py-1.5 bg-blue-50 border border-blue-100 rounded-full mb-4">
-                                            <span className="text-blue-600 font-bold tracking-wider text-xs uppercase">Featured Product</span>
+                                        <div className="inline-block px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full mb-4">
+                                            <span className="text-primary font-bold tracking-wider text-xs uppercase">Featured Product</span>
                                         </div>
                                         <h3 className="text-4xl font-bold text-slate-900 mb-2">IV Infusions</h3>
                                         <p className="text-slate-500 font-medium text-lg">Sterile Intravenous Solutions</p>
@@ -115,19 +115,19 @@ const IVFluids = () => {
                                             <h4 className="text-lg font-bold text-slate-900 mb-3">Key Features:</h4>
                                             <ul className="space-y-2">
                                                 <li className="flex items-center">
-                                                    <span className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
+                                                    <span className="w-2 h-2 bg-secondary rounded-full mr-3"></span>
                                                     <span>Advanced BFS (Blow-Fill-Seal) Technology bottles</span>
                                                 </li>
                                                 <li className="flex items-center">
-                                                    <span className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
+                                                    <span className="w-2 h-2 bg-secondary rounded-full mr-3"></span>
                                                     <span>Pyrogen-free and sterile formulations</span>
                                                 </li>
                                                 <li className="flex items-center">
-                                                    <span className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
+                                                    <span className="w-2 h-2 bg-secondary rounded-full mr-3"></span>
                                                     <span>Leak-proof and collapse-resistant containers</span>
                                                 </li>
                                                 <li className="flex items-center">
-                                                    <span className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
+                                                    <span className="w-2 h-2 bg-secondary rounded-full mr-3"></span>
                                                     <span>Clearly labeled with graduation marks for accuracy</span>
                                                 </li>
                                             </ul>

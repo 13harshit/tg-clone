@@ -70,11 +70,11 @@ const Contact = () => {
   };
 
   return (
-    <PageWrapper className="bg-[#E0F7FA]/30"> {/* Light mix background */}
+    <PageWrapper>
       <Navbar />
 
       {/* Hero Section - Reduced height for better focus on content */}
-      <section className="relative pt-32 pb-12 bg-white overflow-hidden">
+      <section className="relative pt-32 pb-12 overflow-hidden">
         <div className="container-custom relative text-center">
           <h1 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-4">
             {t('contact.title')}
@@ -86,16 +86,16 @@ const Contact = () => {
       </section>
 
       {/* Founder's Message Section */}
-      <section className="py-12 bg-white border-b border-slate-100">
+      <section className="py-12 border-b border-slate-100/50 bg-white/30 backdrop-blur-sm">
         <div className="container-custom">
-          <div className="bg-slate-50 p-8 md:p-10 rounded-3xl border border-slate-100 max-w-5xl mx-auto text-center relative overflow-hidden">
+          <div className="bg-white/50 backdrop-blur-sm p-8 md:p-10 rounded-3xl border border-slate-100 max-w-5xl mx-auto text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-orange-100 rounded-bl-full opacity-50" />
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-blue-100 rounded-tr-full opacity-50" />
             <blockquote className="text-xl font-serif italic text-slate-700 leading-relaxed mb-6 relative z-10">
               {t('contact.founderQuote')}
             </blockquote>
             <div className="flex flex-col items-center relative z-10">
-              <div className="font-bold text-lg text-[#FF6B00]">Dhiraj Rathod</div>
+              <div className="font-bold text-lg text-primary">Dhiraj Rathod</div>
               <div className="text-slate-500 font-medium">Founder, CEO of TG PHARMZ LLP</div>
             </div>
           </div>
@@ -112,7 +112,7 @@ const Contact = () => {
               {contactInfo.map((info, idx) => (
                 <div key={idx} className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center shrink-0">
-                    <info.icon className="w-6 h-6 text-[#FF6B00]" />
+                    <info.icon className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-800 text-lg mb-2">{info.title}</h3>
@@ -127,9 +127,9 @@ const Contact = () => {
 
 
             {/* RIGHT COLUMN: Form */}
-            <div className="bg-[#4FD1C5] p-8 md:p-10 rounded-[2.5rem] text-white shadow-lg sticky top-24">
+            <div className="bg-secondary p-8 md:p-10 rounded-[2.5rem] text-white shadow-lg sticky top-24">
               <div className="mb-8">
-                <p className="text-teal-900 font-medium opacity-80 mb-1">We will contact</p>
+                <p className="text-white/80 font-medium mb-1">We will contact</p>
                 <h2 className="text-3xl md:text-4xl font-bold text-white">
                   {t('contact.formTitle')}
                 </h2>
@@ -138,7 +138,7 @@ const Contact = () => {
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <label className="text-sm font-medium text-teal-800">{t('contact.formName')} *</label>
+                    <label className="text-sm font-medium text-white/90">{t('contact.formName')} *</label>
                     <input
                       type="text"
                       name="firstName"
@@ -164,7 +164,7 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-teal-800">{t('contact.formEmail')} *</label>
+                  <label className="text-sm font-medium text-white/90">{t('contact.formEmail')} *</label>
                   <input
                     type="email"
                     name="email"
@@ -177,7 +177,7 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-teal-800">{t('contact.formSubject')} *</label>
+                  <label className="text-sm font-medium text-white/90">{t('contact.formSubject')} *</label>
                   <input
                     type="text"
                     name="subject"
@@ -190,7 +190,7 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-teal-800">{t('contact.formMessage')} *</label>
+                  <label className="text-sm font-medium text-white/90">{t('contact.formMessage')} *</label>
                   <textarea
                     name="message"
                     value={formData.message}
@@ -207,7 +207,7 @@ const Contact = () => {
                   variant="secondary"
                   size="lg"
                   disabled={isSubmitting}
-                  className="w-full bg-teal-800 hover:bg-teal-900 text-white border-0"
+                  className="w-full bg-primary hover:bg-orange-600 text-white border-0"
                 >
                   {isSubmitting ? 'Sending...' : t('contact.send')}
                 </Button>

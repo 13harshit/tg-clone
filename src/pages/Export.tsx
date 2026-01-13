@@ -40,7 +40,7 @@ const Export = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen">
             <Navbar />
 
             {/* Hero Section */}
@@ -65,7 +65,7 @@ const Export = () => {
                                 transition={{ duration: 0.6 }}
                                 className="bg-black/50 backdrop-blur-sm p-8 md:p-10 rounded-3xl border border-white/10 shadow-2xl text-white"
                             >
-                                <h1 className="text-3xl md:text-4xl font-bold text-[#FF6B00] mb-6">
+                                <h1 className="text-3xl md:text-4xl font-bold text-primary mb-6">
                                     Export
                                 </h1>
                                 <p className="text-gray-100 font-medium leading-relaxed">
@@ -78,7 +78,7 @@ const Export = () => {
             </section>
 
             {/* Stats Section */}
-            <section className="py-12 bg-slate-50 border-y border-slate-100">
+            <section className="py-12 bg-white/30 backdrop-blur-sm border-y border-slate-100/50">
                 <div className="container-custom">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {stats.map((stat, index) => (
@@ -90,7 +90,7 @@ const Export = () => {
                                 transition={{ delay: index * 0.1 }}
                                 className="text-center"
                             >
-                                <div className="text-4xl font-bold text-[#FF6B00] mb-2">{stat.value}</div>
+                                <div className="text-4xl font-bold text-primary mb-2">{stat.value}</div>
                                 <div className="text-slate-600 font-medium">{stat.label}</div>
                             </motion.div>
                         ))}
@@ -99,7 +99,7 @@ const Export = () => {
             </section>
 
             {/* Features Grid */}
-            <section className="py-20 bg-background">
+            <section className="py-20">
                 <div className="container-custom">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}

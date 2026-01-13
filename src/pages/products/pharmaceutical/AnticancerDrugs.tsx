@@ -31,10 +31,10 @@ const AnticancerDrugs = () => {
         <div className="min-h-screen flex flex-col">
             <Navbar />
             <main className="flex-grow">
-                <section className="relative pt-32 pb-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+                <section className="relative pt-32 pb-20">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl mx-auto text-center">
-                            <div className="inline-flex items-center gap-2 bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full mb-6">
+                            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
                                 <FlaskConical className="w-4 h-4" />
                                 <span className="text-sm font-semibold">Oncology Pharmaceuticals</span>
                             </div>
@@ -44,16 +44,16 @@ const AnticancerDrugs = () => {
                     </div>
                 </section>
 
-                <section className="py-20 bg-white">
+                <section className="py-20">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-7xl mx-auto">
-                            <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                                <div className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-6">
+                            <div className="bg-white/60 backdrop-blur-md rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                                <div className="bg-gradient-to-r from-secondary to-primary px-8 py-6">
                                     <h2 className="text-2xl font-bold text-white">Anticancer Drug Product List</h2>
                                 </div>
                                 <div className="overflow-x-auto">
                                     <table className="w-full">
-                                        <thead className="bg-slate-50 border-b-2 border-slate-200">
+                                        <thead className="bg-secondary/5 border-b-2 border-slate-200">
                                             <tr>
                                                 <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">S.No.</th>
                                                 <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Product Name</th>
@@ -64,7 +64,7 @@ const AnticancerDrugs = () => {
                                         </thead>
                                         <tbody className="divide-y divide-slate-100">
                                             {products.map((product, index) => (
-                                                <motion.tr key={product.sno} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.02 }} className="hover:bg-indigo-50 transition-colors">
+                                                <motion.tr key={product.sno} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.02 }} className="hover:bg-primary/5 transition-colors">
                                                     <td className="px-6 py-4 text-sm text-slate-600">{product.sno}</td>
                                                     <td className="px-6 py-4 text-sm font-medium text-slate-900">{product.name}</td>
                                                     <td className="px-6 py-4 text-sm text-slate-600">{product.type}</td>
@@ -81,13 +81,13 @@ const AnticancerDrugs = () => {
                 </section>
 
                 {/* Featured Product Section */}
-                <section className="py-20 bg-slate-50">
+                <section className="py-20">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="w-full bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
+                        <div className="w-full bg-white/60 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden border border-slate-100">
                             <div className="flex flex-col md:flex-row items-center">
-                                <div className="md:w-1/2 p-8 md:p-12 bg-slate-50 flex items-center justify-center border-r border-slate-100 h-full">
+                                <div className="md:w-1/2 p-8 md:p-12 bg-secondary/5 flex items-center justify-center border-r border-slate-100 h-full">
                                     <div className="relative w-full max-w-lg">
-                                        <div className="absolute inset-0 bg-indigo-200 rounded-full blur-3xl opacity-30 transform scale-110"></div>
+                                        <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl opacity-30 transform scale-110"></div>
                                         <img
                                             src="/medicine/ChatGPT Image Jan 6, 2026, 02_23_44 PM.png"
                                             alt="Peg L Asparaginase Injection"
@@ -97,11 +97,11 @@ const AnticancerDrugs = () => {
                                 </div>
                                 <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
                                     <div className="mb-6">
-                                        <div className="inline-block px-4 py-1.5 bg-indigo-50 border border-indigo-100 rounded-full mb-4">
-                                            <span className="text-indigo-600 font-bold tracking-wider text-xs uppercase">Featured Product</span>
+                                        <div className="inline-block px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full mb-4">
+                                            <span className="text-primary font-bold tracking-wider text-xs uppercase">Featured Product</span>
                                         </div>
                                         <h3 className="text-3xl font-bold text-slate-900 mb-2">Peg L Asparaginase Injection</h3>
-                                        <p className="text-indigo-600 font-medium text-lg">Advanced Oncology Treatment</p>
+                                        <p className="text-primary font-medium text-lg">Advanced Oncology Treatment</p>
                                     </div>
                                     <p className="text-slate-600 mb-6 leading-relaxed">
                                         Harnessing the power of pegylated L-asparaginase, this potent formulation targets cancer at its core. By depleting the levels of asparagine, an essential nutrient for cancer cell survival, it inhibits their growth and propagation.
@@ -110,15 +110,15 @@ const AnticancerDrugs = () => {
                                     <h4 className="text-lg font-bold text-slate-900 mb-3">Key Benefits:</h4>
                                     <ul className="space-y-3 mb-8 text-slate-600">
                                         <li className="flex items-start">
-                                            <span className="mr-2 text-indigo-500 font-bold">•</span>
+                                            <span className="mr-2 text-primary font-bold">•</span>
                                             <span><strong className="text-slate-800">Efficiency:</strong> Engineered to maximize anti-cancer impact and curtail malignant cell proliferation.</span>
                                         </li>
                                         <li className="flex items-start">
-                                            <span className="mr-2 text-indigo-500 font-bold">•</span>
+                                            <span className="mr-2 text-primary font-bold">•</span>
                                             <span><strong className="text-slate-800">Reduced Toxicity:</strong> Pegylated variant significantly reduces toxicity levels compared to conventional formulations.</span>
                                         </li>
                                         <li className="flex items-start">
-                                            <span className="mr-2 text-indigo-500 font-bold">•</span>
+                                            <span className="mr-2 text-primary font-bold">•</span>
                                             <span><strong className="text-slate-800">Extended Effectiveness:</strong> Sustained-release formulation ensures prolonged therapeutic effect.</span>
                                         </li>
                                     </ul>

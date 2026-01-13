@@ -42,10 +42,10 @@ const GeneralProducts = () => {
             <Navbar />
 
             <main className="flex-grow">
-                <section className="relative pt-32 pb-20 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+                <section className="relative pt-32 pb-20">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl mx-auto text-center">
-                            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-6">
+                            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
                                 <Pill className="w-4 h-4" />
                                 <span className="text-sm font-semibold">General Pharmaceutical Products</span>
                             </div>
@@ -55,7 +55,7 @@ const GeneralProducts = () => {
                     </div>
                 </section>
 
-                <section className="py-20 bg-white">
+                <section className="py-20">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-6xl mx-auto">
                             {/* Tabs */}
@@ -65,8 +65,8 @@ const GeneralProducts = () => {
                                         key={tab.id}
                                         onClick={() => setActiveTab(tab.id)}
                                         className={`px-6 py-3 font-semibold text-sm transition-all ${activeTab === tab.id
-                                            ? 'text-blue-600 border-b-2 border-blue-600'
-                                            : 'text-slate-600 hover:text-blue-600'
+                                            ? 'text-primary border-b-2 border-primary'
+                                            : 'text-slate-600 hover:text-primary'
                                             }`}
                                     >
                                         {tab.label}
@@ -75,13 +75,13 @@ const GeneralProducts = () => {
                             </div>
 
                             {/* Product Table */}
-                            <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                                <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-6">
+                            <div className="bg-white/60 backdrop-blur-md rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                                <div className="bg-gradient-to-r from-secondary to-primary px-8 py-6">
                                     <h2 className="text-2xl font-bold text-white">{tabs.find(t => t.id === activeTab)?.label} Products</h2>
                                 </div>
                                 <div className="overflow-x-auto">
                                     <table className="w-full">
-                                        <thead className="bg-slate-50 border-b-2 border-slate-200">
+                                        <thead className="bg-secondary/5 border-b-2 border-slate-200">
                                             <tr>
                                                 <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">S.No.</th>
                                                 <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Product Name</th>
@@ -96,7 +96,7 @@ const GeneralProducts = () => {
                                                     initial={{ opacity: 0, y: 10 }}
                                                     animate={{ opacity: 1, y: 0 }}
                                                     transition={{ delay: index * 0.02 }}
-                                                    className="hover:bg-blue-50 transition-colors"
+                                                    className="hover:bg-primary/5 transition-colors"
                                                 >
                                                     <td className="px-6 py-4 text-sm text-slate-600">{index + 1}</td>
                                                     <td className="px-6 py-4 text-sm font-medium text-slate-900">{product.name}</td>
@@ -109,9 +109,9 @@ const GeneralProducts = () => {
                                 </div>
                             </div>
 
-                            <div className="mt-8 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-100">
+                            <div className="mt-8 bg-primary/5 rounded-xl p-6 border border-primary/20">
                                 <p className="text-sm text-slate-700">
-                                    <span className="font-semibold text-blue-700">Note:</span> All products are manufactured under WHO-GMP certified facilities with stringent quality control measures.
+                                    <span className="font-semibold text-primary">Note:</span> All products are manufactured under WHO-GMP certified facilities with stringent quality control measures.
                                 </p>
                             </div>
                         </div>
@@ -120,14 +120,14 @@ const GeneralProducts = () => {
 
 
                 {/* Featured Product Section */}
-                <section className="py-20 bg-slate-50">
+                <section className="py-20">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="w-full bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
+                        <div className="w-full bg-white/60 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden border border-slate-100">
                             <div className="flex flex-col md:flex-row items-center">
                                 {/* Product Image */}
-                                <div className="md:w-1/2 p-8 md:p-12 bg-slate-50 flex items-center justify-center border-r border-slate-100">
+                                <div className="md:w-1/2 p-8 md:p-12 bg-secondary/5 flex items-center justify-center border-r border-slate-100">
                                     <div className="relative w-full max-w-2xl">
-                                        <div className="absolute inset-0 bg-blue-200 rounded-full blur-3xl opacity-30 transform scale-110"></div>
+                                        <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl opacity-30 transform scale-110"></div>
                                         <img
                                             src="/medicine/tablet-sample.png"
                                             alt="Kalcigen SG Product"
@@ -139,11 +139,11 @@ const GeneralProducts = () => {
                                 {/* Product Details */}
                                 <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
                                     <div className="mb-8">
-                                        <div className="inline-block px-4 py-1.5 bg-blue-50 border border-blue-100 rounded-full mb-4">
-                                            <span className="text-blue-600 font-bold tracking-wider text-xs uppercase">Featured Product</span>
+                                        <div className="inline-block px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full mb-4">
+                                            <span className="text-primary font-bold tracking-wider text-xs uppercase">Featured Product</span>
                                         </div>
                                         <h3 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4 leading-tight">Kalcigen SG</h3>
-                                        <p className="text-lg text-blue-600 font-medium">Calcitriol, Calcium Carbonate & Zinc Sulphate Softgel Capsules</p>
+                                        <p className="text-lg text-primary font-medium">Calcitriol, Calcium Carbonate & Zinc Sulphate Softgel Capsules</p>
                                     </div>
 
                                     <div className="space-y-6 mb-10 text-slate-600 leading-relaxed text-lg">

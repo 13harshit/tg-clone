@@ -29,14 +29,14 @@ const CardioCare = () => {
 
             <main className="flex-grow">
                 {/* Hero Section */}
-                <section className="relative pt-32 pb-20 bg-gradient-to-br from-red-50 via-white to-pink-50">
+                <section className="relative pt-32 pb-20">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             className="max-w-4xl mx-auto text-center"
                         >
-                            <div className="inline-flex items-center gap-2 bg-red-100 text-red-700 px-4 py-2 rounded-full mb-6">
+                            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
                                 <HeartPulse className="w-4 h-4" />
                                 <span className="text-sm font-semibold">Cardiovascular Care</span>
                             </div>
@@ -53,19 +53,19 @@ const CardioCare = () => {
                 </section>
 
                 {/* Product Table Section */}
-                <section className="py-20 bg-white">
+                <section className="py-20">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-6xl mx-auto">
-                            <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                            <div className="bg-white/60 backdrop-blur-md rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
                                 {/* Table Header */}
-                                <div className="bg-gradient-to-r from-red-600 to-pink-600 px-8 py-6">
+                                <div className="bg-gradient-to-r from-secondary to-primary px-8 py-6">
                                     <h2 className="text-2xl font-bold text-white">Cardio Care Product List</h2>
                                 </div>
 
                                 {/* Table */}
                                 <div className="overflow-x-auto">
                                     <table className="w-full">
-                                        <thead className="bg-slate-50 border-b-2 border-slate-200">
+                                        <thead className="bg-secondary/5 border-b-2 border-slate-200">
                                             <tr>
                                                 <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">S.No.</th>
                                                 <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Product Name</th>
@@ -81,7 +81,7 @@ const CardioCare = () => {
                                                     whileInView={{ opacity: 1, y: 0 }}
                                                     viewport={{ once: true }}
                                                     transition={{ delay: index * 0.02 }}
-                                                    className="hover:bg-red-50 transition-colors"
+                                                    className="hover:bg-primary/5 transition-colors"
                                                 >
                                                     <td className="px-6 py-4 text-sm text-slate-600">{product.sno}</td>
                                                     <td className="px-6 py-4 text-sm font-medium text-slate-900">{product.name}</td>
@@ -95,9 +95,9 @@ const CardioCare = () => {
                             </div>
 
                             {/* Quality Note */}
-                            <div className="mt-8 bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-6 border border-red-100">
+                            <div className="mt-8 bg-primary/5 rounded-xl p-6 border border-primary/20">
                                 <p className="text-sm text-slate-700">
-                                    <span className="font-semibold text-red-700">Note:</span> All products are manufactured under WHO-GMP certified facilities with stringent quality control measures to ensure patient safety and therapeutic efficacy.
+                                    <span className="font-semibold text-primary">Note:</span> All products are manufactured under WHO-GMP certified facilities with stringent quality control measures to ensure patient safety and therapeutic efficacy.
                                 </p>
                             </div>
                         </div>
@@ -160,15 +160,15 @@ const FeaturedProducts = () => {
     };
 
     return (
-        <section className="py-20 bg-slate-50 border-t border-slate-200">
+        <section className="py-20 border-t border-slate-200">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-12">
-                        <div className="inline-flex items-center justify-center p-2 bg-red-100 rounded-full mb-4">
-                            <Activity className="w-6 h-6 text-red-600" />
+                        <div className="inline-flex items-center justify-center p-2 bg-primary/10 rounded-full mb-4">
+                            <Activity className="w-6 h-6 text-primary" />
                         </div>
                         <h2 className="text-3xl font-bold text-slate-900">Featured Cardio Care Products</h2>
-                        <div className="w-20 h-1 bg-red-500 mx-auto mt-4 rounded-full"></div>
+                        <div className="w-20 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
                     </div>
 
                     <div className="space-y-6">
@@ -182,7 +182,7 @@ const FeaturedProducts = () => {
                             >
                                 <div className="flex flex-col gap-6">
                                     <div>
-                                        <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-red-600 transition-colors">
+                                        <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">
                                             {product.name}
                                         </h3>
                                         <p className="text-slate-600 leading-relaxed">
@@ -192,7 +192,7 @@ const FeaturedProducts = () => {
                                     <div className="flex justify-start">
                                         <Link
                                             to={product.link}
-                                            className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-red-50 text-red-600 font-semibold hover:bg-red-600 hover:text-white transition-all duration-300 whitespace-nowrap"
+                                            className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-primary/10 text-primary font-semibold hover:bg-primary hover:text-white transition-all duration-300 whitespace-nowrap"
                                         >
                                             Read More
                                             <ArrowRight className="w-4 h-4 ml-2" />
@@ -207,7 +207,7 @@ const FeaturedProducts = () => {
                         <div className="text-center mt-12">
                             <button
                                 onClick={handleLoadMore}
-                                className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gradient-to-r from-red-600 to-pink-600 text-white font-bold shadow-lg hover:shadow-red-200 hover:scale-105 transition-all duration-300"
+                                className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gradient-to-r from-primary to-orange-400 text-white font-bold shadow-lg hover:shadow-orange-200 hover:scale-105 transition-all duration-300"
                             >
                                 Load More Products
                             </button>

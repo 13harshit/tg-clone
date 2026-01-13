@@ -51,7 +51,7 @@ const ContractManufacturing = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen">
             <Navbar />
 
             {/* Hero Section */}
@@ -77,7 +77,7 @@ const ContractManufacturing = () => {
                                 transition={{ duration: 0.6 }}
                                 className="bg-white/80 backdrop-blur-sm p-8 md:p-10 rounded-3xl border border-white/20 shadow-2xl"
                             >
-                                <h1 className="text-3xl md:text-4xl font-bold text-[#FF6B00] mb-6">
+                                <h1 className="text-3xl md:text-4xl font-bold text-primary mb-6">
                                     Contract Manufacturing
                                 </h1>
                                 <p className="text-slate-800 font-medium leading-relaxed">
@@ -90,7 +90,7 @@ const ContractManufacturing = () => {
             </section>
 
             {/* Content Sections */}
-            <section className="py-20 bg-background">
+            <section className="py-20">
                 <div className="container-custom">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}

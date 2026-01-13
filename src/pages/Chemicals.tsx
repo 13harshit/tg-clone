@@ -49,7 +49,7 @@ const Chemicals = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen">
             <Navbar />
 
             {/* Hero Section */}
@@ -64,10 +64,10 @@ const Chemicals = () => {
                 {/* Overlay Block */}
                 <div className="relative z-10 container-custom px-4 md:px-6 py-20">
                     <div className="max-w-2xl bg-black/80 backdrop-blur-md p-8 md:p-12 rounded-[2rem] border border-white/10 shadow-2xl relative overflow-hidden group">
-                        <div className="absolute top-0 left-0 w-2 h-full bg-blue-500"></div>
+                        <div className="absolute top-0 left-0 w-2 h-full bg-primary"></div>
 
-                        <div className="inline-block px-4 py-1.5 bg-blue-500/20 border border-blue-500/30 rounded-full mb-6">
-                            <span className="text-sm font-semibold text-blue-300 tracking-wide uppercase">
+                        <div className="inline-block px-4 py-1.5 bg-primary/20 border border-primary/30 rounded-full mb-6">
+                            <span className="text-sm font-semibold text-primary tracking-wide uppercase">
                                 Industrial & Fine Chemicals
                             </span>
                         </div>
@@ -88,7 +88,7 @@ const Chemicals = () => {
                             </p>
                         </div>
 
-                        <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-full transition-all shadow-lg hover:shadow-blue-500/25">
+                        <Button className="bg-primary hover:bg-orange-600 text-white px-8 py-6 text-lg rounded-full transition-all shadow-lg hover:shadow-orange-500/25">
                             Get Quote
                         </Button>
                     </div>
@@ -100,7 +100,7 @@ const Chemicals = () => {
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Chemical Portfolio</h2>
-                        <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
+                        <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8">
@@ -114,11 +114,11 @@ const Chemicals = () => {
                                 className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300 group"
                             >
                                 <div className="flex items-start justify-between mb-4">
-                                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors">
                                         {index + 1}. {item.title}
                                     </h3>
-                                    <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
-                                        <span className="text-blue-600 font-bold group-hover:text-white transition-colors">{index + 1}</span>
+                                    <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center group-hover:bg-primary transition-colors">
+                                        <span className="text-primary font-bold group-hover:text-white transition-colors">{index + 1}</span>
                                     </div>
                                 </div>
 

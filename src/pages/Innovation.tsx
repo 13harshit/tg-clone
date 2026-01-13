@@ -38,7 +38,7 @@ const Innovation = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen">
             <Navbar />
 
             {/* Hero Section */}
@@ -63,7 +63,7 @@ const Innovation = () => {
                                 transition={{ duration: 0.6 }}
                                 className="bg-white/90 backdrop-blur-md p-8 md:p-10 rounded-3xl border border-white/20 shadow-2xl"
                             >
-                                <h1 className="text-3xl md:text-4xl font-bold text-[#FF6B00] mb-6">
+                                <h1 className="text-3xl md:text-4xl font-bold text-primary mb-6">
                                     Innovation at TG PHARMZ LLP
                                 </h1>
                                 <div className="space-y-4 text-slate-700 font-medium leading-relaxed">
@@ -81,7 +81,7 @@ const Innovation = () => {
             </section>
 
             {/* Content Sections */}
-            <section className="py-20 bg-white">
+            <section className="py-20">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
                     <div className="space-y-12">
                         {sections.map((section, index) => (
@@ -94,12 +94,12 @@ const Innovation = () => {
                                 className="space-y-3"
                             >
                                 <div className="inline-block">
-                                    <span className="bg-teal-400 text-slate-900 px-3 py-1 text-xl font-bold box-decoration-clone">
+                                    <span className="bg-secondary/20 text-slate-900 px-3 py-1 text-xl font-bold box-decoration-clone">
                                         {section.title}
                                     </span>
                                 </div>
                                 <div>
-                                    <span className="bg-teal-400/30 px-2 py-0.5 text-slate-800 text-lg leading-relaxed box-decoration-clone">
+                                    <span className="bg-secondary/10 px-2 py-0.5 text-slate-800 text-lg leading-relaxed box-decoration-clone">
                                         {section.content}
                                     </span>
                                 </div>
@@ -110,16 +110,16 @@ const Innovation = () => {
             </section>
 
             {/* Philosophy Section */}
-            <section className="py-20 bg-slate-50">
+            <section className="py-20">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto">
-                        <h2 className="text-3xl font-bold text-center mb-12 text-[#FF6B00]">Our Innovation Philosophy</h2>
+                        <h2 className="text-3xl font-bold text-center mb-12 text-primary">Our Innovation Philosophy</h2>
                         <div className="grid md:grid-cols-3 gap-8">
                             <motion.div
                                 whileHover={{ y: -5 }}
-                                className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#FF6B00]"
+                                className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-primary"
                             >
-                                <Microscope className="w-10 h-10 text-[#FF6B00] mb-4" />
+                                <Microscope className="w-10 h-10 text-primary mb-4" />
                                 <h3 className="text-xl font-bold mb-3 text-slate-800">Research & Development Excellence</h3>
                                 <p className="text-slate-600 text-sm">
                                     Our dedicated R&D teams continually explore new frontiers, leveraging the latest technologies and scientific advancements to drive innovation across our product spectrum.
@@ -128,9 +128,9 @@ const Innovation = () => {
 
                             <motion.div
                                 whileHover={{ y: -5 }}
-                                className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-teal-500"
+                                className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-secondary"
                             >
-                                <Users className="w-10 h-10 text-teal-500 mb-4" />
+                                <Users className="w-10 h-10 text-secondary mb-4" />
                                 <h3 className="text-xl font-bold mb-3 text-slate-800">Customer-Centric Approach</h3>
                                 <p className="text-slate-600 text-sm">
                                     Innovation is fueled by understanding and meeting customer needs. We actively engage with our customers, listening to their feedback and preferences to innovate products that truly resonate.

@@ -343,7 +343,7 @@ const Card = ({ category }: { category: string }) => {
         <div className="relative h-[85vh] w-[90vw] md:w-[70vw] lg:w-[60vw] shrink-0 overflow-hidden rounded-3xl bg-white shadow-xl border border-slate-100 p-8 flex flex-col">
             <div className="mb-6 border-b border-slate-100 pb-4">
                 <h3 className="text-4xl font-bold text-slate-800 mb-2">{category}</h3>
-                <h4 className="text-lg font-medium text-orange-500">{data.title}</h4>
+                <h4 className="text-lg font-medium text-primary">{data.title}</h4>
                 <div className="mt-4 prosc-sm text-slate-600 max-h-[100px] overflow-y-auto pr-2 custom-scrollbar">
                     {data.description}
                 </div>
@@ -351,19 +351,19 @@ const Card = ({ category }: { category: string }) => {
 
             <div className="flex-1 overflow-y-auto pr-2 custom-scrollbar space-y-6">
                 {data.sections.map((section, idx) => (
-                    <div key={idx} className="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:shadow-sm transition-shadow">
+                    <div key={idx} className="bg-white/50 backdrop-blur-sm p-6 rounded-xl border border-slate-100 hover:shadow-sm transition-shadow">
                         <h5 className="font-bold text-slate-900 mb-1 flex items-center gap-2">
-                            <div className="w-1.5 h-6 bg-orange-500 rounded-full"></div>
+                            <div className="w-1.5 h-6 bg-primary rounded-full"></div>
                             {section.title}
                         </h5>
-                        {section.subtitle && <p className="text-xs text-orange-400 font-semibold uppercase tracking-wider mb-2 ml-4">{section.subtitle}</p>}
+                        {section.subtitle && <p className="text-xs text-primary font-semibold uppercase tracking-wider mb-2 ml-4">{section.subtitle}</p>}
                         {section.description && <p className="text-sm text-slate-600 mb-4 ml-4 leading-relaxed">{section.description}</p>}
 
                         {section.items && (
                             <div className="grid md:grid-cols-2 gap-3 ml-4">
                                 {section.items.map((item, i) => (
                                     <div key={i} className="flex gap-2 items-start">
-                                        <CheckCircle2 className="w-4 h-4 text-orange-500 shrink-0 mt-0.5" />
+                                        <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                                         <div>
                                             <h6 className="text-sm font-bold text-slate-800">{item.name}</h6>
                                             <p className="text-xs text-slate-500 leading-tight">{item.description}</p>
@@ -409,12 +409,12 @@ const HorizontalScrollCarousel = () => {
     };
 
     return (
-        <section ref={targetRef} className="relative h-[500vh] bg-slate-50">
+        <section ref={targetRef} className="relative h-[500vh]">
             <div className="sticky top-0 flex h-screen items-center overflow-hidden">
                 <motion.div style={{ x }} className="flex gap-8 pl-8 pr-20 items-center">
                     {/* Introductory Card */}
                     <div className="shrink-0 w-[90vw] md:w-[400px] h-[60vh] bg-slate-900 rounded-3xl p-10 flex flex-col justify-center text-white shadow-2xl relative overflow-hidden transition-all duration-500">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/20 rounded-full blur-3xl -mr-10 -mt-10"></div>
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl -mr-10 -mt-10"></div>
                         <h2 className="text-4xl font-bold mb-6 relative z-10 text-wrap">Explore Our Products</h2>
 
                         <div className="relative z-10 w-full">
@@ -425,7 +425,7 @@ const HorizontalScrollCarousel = () => {
                                     </p>
                                     <button
                                         onClick={() => setShowCategories(true)}
-                                        className="flex items-center gap-2 text-orange-400 font-bold hover:text-orange-300 transition-colors group cursor-pointer"
+                                        className="flex items-center gap-2 text-primary font-bold hover:text-orange-300 transition-colors group cursor-pointer"
                                     >
                                         <span>VIEW ALL CATEGORIES</span>
                                         <div className="w-4 h-4 border-b-2 border-r-2 border-current transform rotate-45 group-hover:translate-y-1 transition-transform"></div>
@@ -437,7 +437,7 @@ const HorizontalScrollCarousel = () => {
                                         <p className="text-xs text-slate-400 uppercase tracking-wider font-semibold">Select Category</p>
                                         <button
                                             onClick={() => setShowCategories(false)}
-                                            className="text-xs text-orange-400 hover:text-orange-300"
+                                            className="text-xs text-primary hover:text-orange-300"
                                         >
                                             Close
                                         </button>
@@ -446,7 +446,7 @@ const HorizontalScrollCarousel = () => {
                                         <button
                                             key={cat}
                                             onClick={() => scrollToCategory(idx)}
-                                            className="w-full text-left px-4 py-3 rounded-lg bg-white/5 hover:bg-orange-500/20 hover:text-orange-300 transition-all border border-white/10 flex items-center justify-between group"
+                                            className="w-full text-left px-4 py-3 rounded-lg bg-white/5 hover:bg-primary/20 hover:text-orange-300 transition-all border border-white/10 flex items-center justify-between group"
                                         >
                                             <span className="font-medium text-sm truncate">{cat}</span>
                                             <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
@@ -472,7 +472,7 @@ const OilAndLubricants = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-slate-50 font-sans">
+        <div className="min-h-screen font-sans text-slate-900">
             <Navbar />
 
             {/* Hero Section */}
@@ -492,11 +492,11 @@ const OilAndLubricants = () => {
                         transition={{ duration: 0.8 }}
                         className="max-w-5xl mx-auto"
                     >
-                        <span className="inline-block px-4 py-1.5 rounded-full bg-orange-500/20 text-orange-400 text-sm font-bold tracking-wider mb-6 border border-orange-500/30 backdrop-blur-sm">
+                        <span className="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary text-sm font-bold tracking-wider mb-6 border border-primary/30 backdrop-blur-sm">
                             PREMIUM INDUSTRIAL SOLUTIONS
                         </span>
                         <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight drop-shadow-xl">
-                            Oil & <span className="text-orange-500">Lubricants</span>
+                            Oil & <span className="text-primary">Lubricants</span>
                         </h1>
                         <p className="text-lg md:text-xl text-slate-100 leading-relaxed font-light drop-shadow-md text-justify md:text-center">
                             As a diversified Manufacturer and Supplier, TG PHARMZ extends its expertise beyond medicinal products to deliver high-grade Oils and Lubricants designed for industrial and automotive excellence. Our products are precision-formulated to meet the highest industry standards, ensuring your machinery operates at peak efficiency. From heavy-duty industrial lubricants to high-performance automotive engine oils, we provide solutions that reduce friction, dissipate heat, and protect against wear in the most demanding environments.
@@ -509,19 +509,19 @@ const OilAndLubricants = () => {
             <HorizontalScrollCarousel />
 
             {/* Features Grid */}
-            <section className="py-20 bg-white border-t border-slate-100">
+            <section className="py-20 border-t border-slate-100/50">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16 max-w-4xl mx-auto">
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">We carefully craft our fluids to deliver exceptional reliability across a variety of applications.</h2>
                     </div>
                     <div className="grid md:grid-cols-4 gap-8">
                         {[
-                            { title: "Superior Protection", desc: "Advanced additive technology creates a robust protective film that prevents metal-to-metal contact.", icon: <Shield className="w-8 h-8 text-blue-600" /> },
-                            { title: "Extended Equipment Life", desc: "Reduces wear and tear on critical components, significantly prolonging the lifespan of your machinery.", icon: <Activity className="w-8 h-8 text-green-600" /> },
-                            { title: "Cost Efficiency", desc: "Formulated to resist thermal breakdown, leading to longer drain intervals and reduced maintenance costs.", icon: <Droplet className="w-8 h-8 text-orange-600" /> },
-                            { title: "Versatile Performance", desc: "Engineered to perform consistently under extreme pressures and variable temperatures.", icon: <Settings className="w-8 h-8 text-purple-600" /> }
+                            { title: "Superior Protection", desc: "Advanced additive technology creates a robust protective film that prevents metal-to-metal contact.", icon: <Shield className="w-8 h-8 text-secondary" /> },
+                            { title: "Extended Equipment Life", desc: "Reduces wear and tear on critical components, significantly prolonging the lifespan of your machinery.", icon: <Activity className="w-8 h-8 text-secondary" /> },
+                            { title: "Cost Efficiency", desc: "Formulated to resist thermal breakdown, leading to longer drain intervals and reduced maintenance costs.", icon: <Droplet className="w-8 h-8 text-secondary" /> },
+                            { title: "Versatile Performance", desc: "Engineered to perform consistently under extreme pressures and variable temperatures.", icon: <Settings className="w-8 h-8 text-secondary" /> }
                         ].map((feature, i) => (
-                            <div key={i} className="text-center p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition-all border border-slate-100 group">
+                            <div key={i} className="text-center p-8 rounded-2xl bg-white/60 backdrop-blur-sm hover:bg-white hover:shadow-xl transition-all border border-slate-100 group">
                                 <div className="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                                     {feature.icon}
                                 </div>

@@ -7,30 +7,33 @@
 @layer base {
   :root {
     /* Core Colors - Premium Pharmaceutical Theme */
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
+    --background: 60 25% 98%;
+    /* #FEFEFA */
+    --foreground: 0 0% 17%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card: 60 25% 98%;
+    /* #FEFEFA */
+    --card-foreground: 0 0% 17%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover: 60 25% 98%;
+    /* #FEFEFA */
+    --popover-foreground: 0 0% 17%;
 
-    /* Primary - Deep Teal */
-    --primary: 187 85% 35%;
+    /* Primary - Brand Orange (#F28C1B) */
+    --primary: 32 89% 53%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 187 85% 45%;
-    --primary-dark: 187 85% 25%;
+    --primary-light: 32 89% 63%;
+    --primary-dark: 32 89% 43%;
 
-    /* Secondary - Navy Blue */
-    --secondary: 220 50% 15%;
+    /* Secondary - Brand Green (#3E7C6B) */
+    --secondary: 163 33% 36%;
     --secondary-foreground: 0 0% 100%;
 
-    /* Accent - Bright Cyan */
-    --accent: 185 95% 45%;
-    --accent-foreground: 220 50% 10%;
+    /* Accent - Brand Orange (#F28C1B) */
+    --accent: 32 89% 53%;
+    --accent-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96%;
+    --muted: 210 9% 97%;
     --muted-foreground: 215 16% 47%;
 
     --destructive: 0 84% 60%;
@@ -38,7 +41,7 @@
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 187 85% 35%;
+    --ring: 32 89% 53%;
 
     /* Premium Radius */
     --radius: 1rem;
@@ -52,11 +55,11 @@
     --shadow-glow: 0 0 20px rgba(var(--primary), 0.3);
 
     /* Custom Colors */
-    --hero-gradient-start: 220 50% 8%;
-    --hero-gradient-end: 220 45% 15%;
+    --hero-gradient-start: 163 33% 36%;
+    --hero-gradient-end: 163 33% 26%;
     --glass: 0 0% 100%;
     --glass-border: 0 0% 100%;
-    --glow: 185 95% 50%;
+    --glow: 32 89% 53%;
 
     /* Sidebar */
     --sidebar-background: 0 0% 98%;
@@ -116,6 +119,8 @@
 
   body {
     @apply bg-background text-foreground font-body antialiased;
+    background: linear-gradient(180deg, #FEFEFA 0%, #F7E7CE 100%);
+    min-height: 100vh;
   }
 
   h1,

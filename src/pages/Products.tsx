@@ -117,7 +117,7 @@ const Products = () => {
       </section>
 
       {/* Products Grid */}
-      <section className="py-20 bg-background">
+      <section className="py-20">
         <div className="container-custom">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {currentCategory.products.map((product, index) => (

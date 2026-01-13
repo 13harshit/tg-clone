@@ -16,11 +16,11 @@ const regulatoryServices = [
 
 const Regulatory = () => {
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen">
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative pt-32 pb-20 bg-white overflow-hidden">
+            <section className="relative pt-32 pb-20 overflow-hidden">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="relative bg-white rounded-3xl overflow-hidden shadow-xl min-h-[500px] flex flex-col md:flex-row shadow-2xl">
 
@@ -44,7 +44,7 @@ const Regulatory = () => {
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.6 }}
                             >
-                                <h1 className="text-3xl md:text-4xl font-bold text-[#FF6B00] mb-8">
+                                <h1 className="text-3xl md:text-4xl font-bold text-primary mb-8">
                                     Regulatory
                                 </h1>
 
@@ -63,7 +63,7 @@ const Regulatory = () => {
             </section>
 
             {/* Services List Section */}
-            <section className="py-16 bg-white">
+            <section className="py-16">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -79,10 +79,10 @@ const Regulatory = () => {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: index * 0.1 }}
-                                    className="flex items-center gap-3 text-slate-600 text-lg hover:text-[#FF6B00] transition-colors group cursor-default"
+                                    className="flex items-center gap-3 text-slate-600 text-lg hover:text-primary transition-colors group cursor-default"
                                 >
                                     {/* Small bullet point or icon can be added, kept simple text as per screenshot */}
-                                    <span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-[#FF6B00] transition-colors mt-1.5"></span>
+                                    <span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-primary transition-colors mt-1.5"></span>
                                     <span>{service}</span>
                                 </motion.div>
                             ))}

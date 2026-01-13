@@ -92,7 +92,7 @@ const About = () => {
       {/* Hero / Welcome Section */}
       <section
         ref={heroRef}
-        className="relative pt-32 pb-20 bg-gradient-to-b from-orange-50 to-white overflow-hidden"
+        className="relative pt-32 pb-20 overflow-hidden"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -101,12 +101,12 @@ const About = () => {
               animate={isHeroInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-1.5 rounded-full bg-[#FF6B00]/10 text-[#FF6B00] text-sm font-medium mb-6">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
                 {t('aboutPage.badge')}
               </span>
               <h1 className="text-4xl sm:text-5xl font-bold text-slate-800 mb-6 leading-tight">
                 {t('aboutPage.welcome')} <br />
-                <span className="text-[#FF6B00]">TG PHARMZ</span>
+                <span className="text-primary">TG PHARMZ</span>
               </h1>
               <p className="text-slate-600 text-lg mb-6 leading-relaxed">
                 {t('aboutPage.intro')}
@@ -155,7 +155,7 @@ const About = () => {
                   ))}
                 </div>
               </div>
-              <div className="absolute -bottom-6 -left-6 z-[-1] w-24 h-24 bg-[#FF6B00]/20 rounded-full blur-xl" />
+              <div className="absolute -bottom-6 -left-6 z-[-1] w-24 h-24 bg-primary/20 rounded-full blur-xl" />
               <div className="absolute -top-6 -right-6 z-[-1] w-32 h-32 bg-teal-500/20 rounded-full blur-xl" />
             </motion.div>
           </div>
@@ -163,17 +163,17 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-white">
+      <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all"
+              className="p-8 rounded-2xl bg-white/50 backdrop-blur-sm border border-slate-100 hover:shadow-lg transition-all"
             >
-              <div className="w-14 h-14 rounded-xl bg-[#FF6B00]/10 flex items-center justify-center mb-6">
-                <Target className="w-7 h-7 text-[#FF6B00]" />
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                <Target className="w-7 h-7 text-primary" />
               </div>
               <h2 className="text-2xl font-bold text-slate-800 mb-4">{t('aboutPage.missionTitle')}</h2>
               <p className="text-slate-600 leading-relaxed">
@@ -186,7 +186,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all"
+              className="p-8 rounded-2xl bg-white/50 backdrop-blur-sm border border-slate-100 hover:shadow-lg transition-all"
             >
               <div className="w-14 h-14 rounded-xl bg-teal-500/10 flex items-center justify-center mb-6">
                 <Eye className="w-7 h-7 text-teal-600" />
@@ -201,7 +201,7 @@ const About = () => {
       </section>
 
       {/* Content Sections: Client Satisfaction, Team, Strengths */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
 
           {/* Client Satisfaction */}
@@ -212,7 +212,7 @@ const About = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl font-bold text-slate-800 mb-6 flex items-center gap-3">
-                <Trophy className="w-8 h-8 text-[#FF6B00]" />
+                <Trophy className="w-8 h-8 text-primary" />
                 {t('aboutPage.clientSatTitle')}
               </h2>
               <p className="text-slate-600 leading-relaxed text-lg">
@@ -252,7 +252,7 @@ const About = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100"
+              className="bg-white/50 backdrop-blur-sm p-8 rounded-2xl shadow-sm border border-slate-100"
             >
               <h2 className="text-3xl font-bold text-slate-800 mb-6 flex items-center gap-3">
                 <Briefcase className="w-8 h-8 text-indigo-600" />
@@ -267,7 +267,7 @@ const About = () => {
       </section>
 
       {/* Product Showcase Section */}
-      <section className="py-20 bg-white overflow-hidden">
+      <section className="py-20 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="w-full">
             <div className="grid md:grid-cols-2 gap-8 mb-8 items-stretch">
@@ -373,7 +373,7 @@ const About = () => {
       </section>
 
       {/* Why Us */}
-      <section className="py-20 bg-white">
+      <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -381,7 +381,7 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto mb-16"
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-[#FF6B00]/10 text-[#FF6B00] text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
               {t('excellence.title')}
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">
@@ -400,10 +400,10 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="flex items-center gap-4 p-6 rounded-xl bg-slate-50 border border-slate-100 hover:border-[#FF6B00]/30 transition-colors"
+                className="flex items-center gap-4 p-6 rounded-xl bg-white/50 backdrop-blur-sm border border-slate-100 hover:border-primary/30 transition-colors"
               >
-                <div className="min-w-8 h-8 rounded-full bg-[#FF6B00]/10 flex items-center justify-center">
-                  <CheckCircle className="w-4 h-4 text-[#FF6B00]" />
+                <div className="min-w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                  <CheckCircle className="w-4 h-4 text-primary" />
                 </div>
                 <span className="font-medium text-slate-700">{point}</span>
               </motion.div>
@@ -422,7 +422,7 @@ const About = () => {
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-3xl font-bold mb-12 text-center flex items-center justify-center gap-3">
-              <Globe className="w-8 h-8 text-[#FF6B00]" />
+              <Globe className="w-8 h-8 text-primary" />
               {t('fact.sheetTitle')}
             </h2>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10">

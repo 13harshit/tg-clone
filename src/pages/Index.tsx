@@ -64,14 +64,14 @@ const Index = () => {
               className="glass-card max-w-xl p-8 rounded-3xl"
             >
               <div className="flex items-center gap-2 mb-4">
-                <div className="h-0.5 w-8 bg-[#FF6B00]"></div>
+                <div className="h-0.5 w-8 bg-primary"></div>
                 <span className="text-slate-800 font-bold tracking-wider text-sm">{t('hero.welcome')}</span>
               </div>
 
-              <h1 className="text-6xl font-extrabold text-[#FF6B00] leading-tight mb-2">
+              <h1 className="text-6xl font-extrabold text-primary leading-tight mb-2">
                 TG
               </h1>
-              <h1 className="text-5xl font-extrabold text-[#FF6B00] leading-tight mb-4">
+              <h1 className="text-5xl font-extrabold text-primary leading-tight mb-4">
                 PHARMZ
               </h1>
               <h2 className="text-2xl font-semibold text-slate-700 mb-6">
@@ -102,7 +102,7 @@ const Index = () => {
                     to={item.path}
                     className="flex items-center gap-4 p-4 hover:bg-white/10 rounded-xl cursor-pointer transition-colors border-b border-white/5 last:border-0 group"
                   >
-                    <div className="w-10 h-10 rounded-lg border border-[#FF6B00] flex items-center justify-center text-[#FF6B00] group-hover:bg-[#FF6B00] group-hover:text-white transition-colors">
+                    <div className="w-10 h-10 rounded-lg border border-primary flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                       {/* Using a generic icon or could map specific ones */}
                       <div className="w-4 h-4 border-2 border-current rounded-sm"></div>
                     </div>
@@ -122,7 +122,7 @@ const Index = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-[3rem] shadow-2xl p-12 relative overflow-hidden"
+              className="bg-white/80 backdrop-blur-md rounded-[3rem] shadow-2xl p-12 relative overflow-hidden"
             >
               {/* Decorative Elements */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-teal-50 rounded-full blur-3xl -z-10 opacity-50"></div>
@@ -156,7 +156,7 @@ const Index = () => {
         </section>
 
         {/* Stats Banner */}
-        <div className="bg-white py-10 border-y border-slate-100">
+        <div className="py-10 border-y border-slate-100/50 bg-white/30 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {[
@@ -175,7 +175,7 @@ const Index = () => {
         </div>
 
         {/* Our Expertise Section */}
-        <section className="py-20 bg-slate-50">
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <span className="text-blue-600 font-bold text-sm uppercase tracking-widest bg-blue-50 px-4 py-1 rounded-full">{t('offer.title')}</span>
@@ -240,7 +240,7 @@ const Index = () => {
         </section>
 
         {/* Excellence Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <span className="text-blue-600 font-bold text-sm uppercase tracking-widest bg-blue-50 px-4 py-1 rounded-full">Why Choose Us</span>
@@ -272,11 +272,11 @@ const Index = () => {
         </section>
 
         {/* Pharmaceutical Products Section */}
-        <section className="py-20 bg-slate-50">
+        <section className="py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-slate-900 mb-4">{t('nav.pharmaceutical')}</h2>
-              <div className="w-20 h-1 bg-[#FF6B00] mx-auto rounded-full"></div>
+              <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -312,7 +312,7 @@ const Index = () => {
 
 
         {/* Our Specialty Section */}
-        <section className="py-20 bg-white overflow-hidden">
+        <section className="py-20 overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row items-stretch shadow-2xl rounded-3xl overflow-hidden">
               {/* Left: Image Carousel */}

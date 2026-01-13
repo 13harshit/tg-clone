@@ -10,8 +10,7 @@ import {
   Instagram,
   Youtube,
   ArrowUpRight,
-  Send,
-  ShoppingBag
+  Send
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -77,12 +76,7 @@ const Footer = () => {
             {/* Company Info */}
             <div className="space-y-6">
               <Link to="/" className="flex items-center gap-2 group">
-                <div className="p-2 bg-white/10 rounded-lg group-hover:bg-white/20 transition-colors backdrop-blur-sm">
-                  <ShoppingBag className="w-8 h-8 text-blue-400" />
-                </div>
-                <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">
-                  TG Pharmz
-                </span>
+                <img src="/new-logo.png" alt="TG PHARMZ" className="h-20 w-auto" />
               </Link>
               <p className="text-slate-400 leading-relaxed text-sm">
                 Dedicated to improving global health through innovative pharmaceutical solutions. Excellence in every drop, quality in every pill.
@@ -92,7 +86,7 @@ const Footer = () => {
                   <a
                     key={index}
                     href="#"
-                    className="w-10 h-10 rounded-lg bg-slate-800/50 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all duration-300 hover:-translate-y-1"
+                    className="w-10 h-10 rounded-lg bg-slate-800/50 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-1"
                   >
                     <Icon className="w-5 h-5" />
                   </a>
@@ -193,9 +187,9 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
             <p>© {new Date().getFullYear()} TG Pharmz. All rights reserved.</p>
             <div className="flex gap-8">
-              <Link to="/privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</Link>
-              <Link to="/terms" className="hover:text-blue-400 transition-colors">Terms of Service</Link>
-              <Link to="/sitemap" className="hover:text-blue-400 transition-colors">Sitemap</Link>
+              <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+              <Link to="/sitemap" className="hover:text-primary transition-colors">Sitemap</Link>
             </div>
           </div>
         </div>

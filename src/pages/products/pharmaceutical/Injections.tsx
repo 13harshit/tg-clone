@@ -34,14 +34,14 @@ const Injections = () => {
 
             <main className="flex-grow">
                 {/* Hero Section */}
-                <section className="relative pt-32 pb-20 bg-gradient-to-br from-cyan-50 via-white to-blue-50">
+                <section className="relative pt-32 pb-20">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             className="max-w-4xl mx-auto text-center"
                         >
-                            <div className="inline-flex items-center gap-2 bg-cyan-100 text-cyan-700 px-4 py-2 rounded-full mb-6">
+                            <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full mb-6">
                                 <Syringe className="w-4 h-4" />
                                 <span className="text-sm font-semibold">Injectable Pharmaceuticals</span>
                             </div>
@@ -58,19 +58,19 @@ const Injections = () => {
                 </section>
 
                 {/* Product Table Section */}
-                <section className="py-20 bg-white">
+                <section className="py-20">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-6xl mx-auto">
-                            <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                            <div className="bg-white/60 backdrop-blur-md rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
                                 {/* Table Header */}
-                                <div className="bg-gradient-to-r from-cyan-600 to-blue-600 px-8 py-6">
+                                <div className="bg-gradient-to-r from-secondary to-primary px-8 py-6">
                                     <h2 className="text-2xl font-bold text-white">Injectable Product List</h2>
                                 </div>
 
                                 {/* Table */}
                                 <div className="overflow-x-auto">
                                     <table className="w-full">
-                                        <thead className="bg-slate-50 border-b-2 border-slate-200">
+                                        <thead className="bg-secondary/5 border-b-2 border-slate-200">
                                             <tr>
                                                 <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">S.No.</th>
                                                 <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Product Name</th>
@@ -86,7 +86,7 @@ const Injections = () => {
                                                     whileInView={{ opacity: 1, y: 0 }}
                                                     viewport={{ once: true }}
                                                     transition={{ delay: index * 0.02 }}
-                                                    className="hover:bg-cyan-50 transition-colors"
+                                                    className="hover:bg-secondary/5 transition-colors"
                                                 >
                                                     <td className="px-6 py-4 text-sm text-slate-600">{product.sno}</td>
                                                     <td className="px-6 py-4 text-sm font-medium text-slate-900">{product.name}</td>
@@ -100,9 +100,9 @@ const Injections = () => {
                             </div>
 
                             {/* Quality Note */}
-                            <div className="mt-8 bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-6 border border-cyan-100">
+                            <div className="mt-8 bg-secondary/5 rounded-xl p-6 border border-secondary/20">
                                 <p className="text-sm text-slate-700">
-                                    <span className="font-semibold text-cyan-700">Note:</span> All injectable products are manufactured in state-of-the-art aseptic facilities with Class 100 cleanroom standards, ensuring sterility and patient safety.
+                                    <span className="font-semibold text-secondary">Note:</span> All injectable products are manufactured in state-of-the-art aseptic facilities with Class 100 cleanroom standards, ensuring sterility and patient safety.
                                 </p>
                             </div>
                         </div>
@@ -110,7 +110,7 @@ const Injections = () => {
                 </section>
 
                 {/* Featured Products Section */}
-                <section className="py-20 bg-slate-50">
+                <section className="py-20">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
                         {/* Product 1: Emstron */}
                         <div className="w-full bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
@@ -268,7 +268,7 @@ const Injections = () => {
 
 
                 {/* Products List for Injections Section */}
-                <section className="py-20 bg-white border-t border-slate-100">
+                <section className="py-20 border-t border-slate-100">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-6xl mx-auto space-y-16">
 
