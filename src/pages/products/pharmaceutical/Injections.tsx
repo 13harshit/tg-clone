@@ -257,7 +257,7 @@ const Injections = () => {
                                         </div>
                                         <div>
                                             <span className="block text-sm font-bold text-slate-900">Manufacturer</span>
-                                            <span className="text-slate-600 text-sm">GJ PHARMACEUTICALS</span>
+                                            <span className="text-slate-600 text-sm">G J Pharmaceuticals LLP</span>
                                         </div>
                                     </div>
                                 </div>
@@ -282,7 +282,7 @@ const Injections = () => {
                                 <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
                                     <h3 className="text-2xl font-bold text-slate-900 mb-4">Iron Sucrose 2.5 ml</h3>
                                     <p className="text-slate-600 leading-relaxed mb-6">
-                                        Discover the power of Pharmaceutical Injections: Iron Sucrose 2.5 ml by GJ PHARMACEUTICALS, we are dedicated to delivering top-quality pharmaceutical injections that meet global standards of excellence. With a commitment to innovation, quality, and customer satisfaction, we strive to be your trusted partner in healthcare. Product Name: Iron Sucrose 2.5 ml
+                                        Discover the power of Pharmaceutical Injections: Iron Sucrose 2.5 ml by G J Pharmaceuticals LLP, we are dedicated to delivering top-quality pharmaceutical injections that meet global standards of excellence. With a commitment to innovation, quality, and customer satisfaction, we strive to be your trusted partner in healthcare. Product Name: Iron Sucrose 2.5 ml
                                     </p>
                                     <Link to="/products/pharmaceutical/injections/iron-sucrose" className="inline-flex items-center text-cyan-600 font-semibold hover:text-cyan-700 transition-colors group">
                                         Read More
@@ -296,7 +296,7 @@ const Injections = () => {
                                 <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
                                     <h3 className="text-2xl font-bold text-slate-900 mb-4">Gentamicin 30 ml injection</h3>
                                     <p className="text-slate-600 leading-relaxed mb-6">
-                                        Discover the power of Pharmaceutical Injections: Gentamicin 30 ml injection by GJ PHARMACEUTICALS, we are dedicated to delivering top-quality pharmaceutical injections that meet global standards of excellence. With a commitment to innovation, quality, and customer satisfaction, we strive to be your trusted partner in healthcare. Product Name: Gentamicin 30 ml injection
+                                        Discover the power of Pharmaceutical Injections: Gentamicin 30 ml injection by G J Pharmaceuticals LLP, we are dedicated to delivering top-quality pharmaceutical injections that meet global standards of excellence. With a commitment to innovation, quality, and customer satisfaction, we strive to be your trusted partner in healthcare. Product Name: Gentamicin 30 ml injection
                                     </p>
                                     <Link to="/products/pharmaceutical/injections/gentamicin" className="inline-flex items-center text-cyan-600 font-semibold hover:text-cyan-700 transition-colors group">
                                         Read More

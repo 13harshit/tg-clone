@@ -138,7 +138,7 @@ const AnticancerDrugs = () => {
                                         </div>
                                         <div>
                                             <span className="block text-sm font-bold text-slate-900">Manufacturer</span>
-                                            <span className="text-slate-600 text-sm">GJ PHARMACEUTICALS</span>
+                                            <span className="text-slate-600 text-sm">G J Pharmaceuticals LLP</span>
                                         </div>
                                     </div>
                                 </div>

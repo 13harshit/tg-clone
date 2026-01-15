@@ -34,7 +34,7 @@ const VitaminA200k = () => {
                                     Soft gel capsules, <strong>Vitamin A Capsules 2,00,000 I.U.</strong> also known as softgels, are a popular form of oral dosage for medications, supplements, and vitamins. These capsules are made from a gelatin-based shell that contains a liquid or semi-solid fill material. Soft gel capsules offer several advantages over other forms of oral medication delivery.
                                 </p>
                                 <p className="text-lg text-secondary max-w-3xl mx-auto">
-                                    Discover the power of Soft Gel Capsules: Vitamin A 200000 IU by GJ PHARMACEUTICALS. Our Comprehensive Soft Gel Capsules health supplement is expertly formulated to support heart function and overall cardiovascular well-being. Packed with natural ingredients and backed by science, Soft Gel Capsules promotes healthy blood circulation, maintains optimal cholesterol levels, and supports heart muscle function. Enhance your heart health today with Soft Gel Capsules.
+                                    Discover the power of Soft Gel Capsules: Vitamin A 200000 IU by G J Pharmaceuticals LLP. Our Comprehensive Soft Gel Capsules health supplement is expertly formulated to support heart function and overall cardiovascular well-being. Packed with natural ingredients and backed by science, Soft Gel Capsules promotes healthy blood circulation, maintains optimal cholesterol levels, and supports heart muscle function. Enhance your heart health today with Soft Gel Capsules.
                                 </p>
                             </div>
 
@@ -56,7 +56,7 @@ const VitaminA200k = () => {
                                         </tr>
                                         <tr>
                                             <th className="p-4 bg-secondary/5 font-semibold text-slate-700">Manufacturer</th>
-                                            <td className="p-4 text-slate-600">GJ PHARMACEUTICALS</td>
+                                            <td className="p-4 text-slate-600">G J Pharmaceuticals LLP</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -162,7 +162,7 @@ const VitaminA200k = () => {
                             <div>
                                 <h3 className="text-xl font-bold text-slate-900 mb-4">Quality Assurance:</h3>
                                 <p className="text-slate-600 leading-relaxed border-l-4 border-primary pl-4 py-2 bg-secondary/5 rounded-r-lg">
-                                    GJ PHARMACEUTICALS follows strict quality control measures to ensure that <strong>Vitamin A 200000 IU</strong> meets the highest standards of safety, purity, and efficacy. Our manufacturing facilities adhere to Good Manufacturing Practices (GMP) guidelines, and each batch undergoes rigorous testing for quality and consistency.
+                                    G J Pharmaceuticals LLP follows strict quality control measures to ensure that <strong>Vitamin A 200000 IU</strong> meets the highest standards of safety, purity, and efficacy. Our manufacturing facilities adhere to Good Manufacturing Practices (GMP) guidelines, and each batch undergoes rigorous testing for quality and consistency.
                                 </p>
                             </div>
 

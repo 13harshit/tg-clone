@@ -76,7 +76,7 @@ const Footer = () => {
             {/* Company Info */}
             <div className="space-y-6">
               <Link to="/" className="flex items-center gap-2 group">
-                <img src="/new-logo.png" alt="GJ PHARMACEUTICALS" className="h-20 w-auto" />
+                <img src="/new-logo.png" alt="G J Pharmaceuticals LLP" className="h-20 w-auto" />
               </Link>
               <p className="text-slate-400 leading-relaxed text-sm">
                 Dedicated to improving global health through innovative pharmaceutical solutions. Excellence in every drop, quality in every pill.
@@ -185,7 +185,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-slate-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
-            <p>© {new Date().getFullYear()} GJ Pharmaceuticals. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} G J Pharmaceuticals LLP. All rights reserved.</p>
             <div className="flex gap-8">
               <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>

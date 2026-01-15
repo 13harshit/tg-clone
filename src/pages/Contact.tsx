@@ -70,11 +70,11 @@ const Contact = () => {
     <PageWrapper>
       <Seo
         title="Contact Us"
-        description="Contact GJ PHARMACEUTICALS LLP for high-quality pharmaceutical products. Reach us at our new Mumbai or Ahmedabad offices."
+        description="Contact G J Pharmaceuticals LLP for high-quality pharmaceutical products. Reach us at our new Mumbai or Ahmedabad offices."
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          "name": "GJ PHARMACEUTICALS LLP",
+          "name": "G J Pharmaceuticals LLP",
           "image": "https://tgpharmz.com/new-logo.png",
           "telephone": "+91 9167369755",
           "email": "gjpharmaceuticalsllp@gmail.com",
@@ -126,7 +126,7 @@ const Contact = () => {
             </blockquote>
             <div className="flex flex-col items-center relative z-10">
               <div className="font-bold text-lg text-primary">Dhiraj Rathod</div>
-              <div className="text-slate-500 font-medium">Founder, CEO of GJ PHARMACEUTICALS LLP</div>
+              <div className="text-slate-500 font-medium">Founder, CEO of G J Pharmaceuticals LLP</div>
             </div>
           </div>
         </div>

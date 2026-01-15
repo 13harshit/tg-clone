@@ -22,7 +22,7 @@ interface ProductContent {
 const contentData: Record<string, ProductContent> = {
     "Lubricants": {
         title: "Industrial & Automotive Lubricants",
-        description: "At GJ PHARMACEUTICALS, we extend our manufacturing precision to the world of advanced lubrication. We are a premier Manufacturer and Supplier of a vast portfolio of oils and lubricants designed to reduce friction, dissipate heat, and prolong the lifespan of critical machinery. From heavy-duty Industrial Lubricants to precision Textile and Automotive solutions, our products are engineered to meet the rigorous demands of modern engineering.",
+        description: "At G J Pharmaceuticals LLP, we extend our manufacturing precision to the world of advanced lubrication. We are a premier Manufacturer and Supplier of a vast portfolio of oils and lubricants designed to reduce friction, dissipate heat, and prolong the lifespan of critical machinery. From heavy-duty Industrial Lubricants to precision Textile and Automotive solutions, our products are engineered to meet the rigorous demands of modern engineering.",
         sections: [
             {
                 title: "Industrial & Heavy Machinery",
@@ -95,7 +95,7 @@ const contentData: Record<string, ProductContent> = {
     },
     "Grease": {
         title: "High Performance Grease",
-        description: "At GJ PHARMACEUTICALS, we manufacture a comprehensive range of Lubricating Greases designed to stay in place and provide long-lasting protection. From standard Lithium Base Grease to specialized High Vacuum and Food Grade formulations, our greases are engineered to seal out contaminants, resist water washout, and perform under extreme pressure.",
+        description: "At G J Pharmaceuticals LLP, we manufacture a comprehensive range of Lubricating Greases designed to stay in place and provide long-lasting protection. From standard Lithium Base Grease to specialized High Vacuum and Food Grade formulations, our greases are engineered to seal out contaminants, resist water washout, and perform under extreme pressure.",
         sections: [
             {
                 title: "General Purpose & Lithium Greases",
@@ -161,7 +161,7 @@ const contentData: Record<string, ProductContent> = {
     },
     "Engine Oil": {
         title: "Engine Oil Solutions",
-        description: "At GJ PHARMACEUTICALS, we engineer our engine oils to deliver maximum power and protection. As a trusted Manufacturer and Supplier, we provide high-quality formulations that clean your engine, reduce friction, and prevent sludge buildup.",
+        description: "At G J Pharmaceuticals LLP, we engineer our engine oils to deliver maximum power and protection. As a trusted Manufacturer and Supplier, we provide high-quality formulations that clean your engine, reduce friction, and prevent sludge buildup.",
         sections: [
             {
                 title: "Heavy Duty & Commercial Engines",
@@ -499,7 +499,7 @@ const OilAndLubricants = () => {
                             Oil & <span className="text-primary">Lubricants</span>
                         </h1>
                         <p className="text-lg md:text-xl text-slate-100 leading-relaxed font-light drop-shadow-md text-justify md:text-center">
-                            As a diversified Manufacturer and Supplier, GJ PHARMACEUTICALS extends its expertise beyond medicinal products to deliver high-grade Oils and Lubricants designed for industrial and automotive excellence. Our products are precision-formulated to meet the highest industry standards, ensuring your machinery operates at peak efficiency. From heavy-duty industrial lubricants to high-performance automotive engine oils, we provide solutions that reduce friction, dissipate heat, and protect against wear in the most demanding environments.
+                            As a diversified Manufacturer and Supplier, G J Pharmaceuticals LLP extends its expertise beyond medicinal products to deliver high-grade Oils and Lubricants designed for industrial and automotive excellence. Our products are precision-formulated to meet the highest industry standards, ensuring your machinery operates at peak efficiency. From heavy-duty industrial lubricants to high-performance automotive engine oils, we provide solutions that reduce friction, dissipate heat, and protect against wear in the most demanding environments.
                         </p>
                     </motion.div>
                 </div>

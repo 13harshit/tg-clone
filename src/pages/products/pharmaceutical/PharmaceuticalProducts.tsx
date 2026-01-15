@@ -283,12 +283,12 @@ const PharmaceuticalProducts = () => {
                             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                                 Pharmaceutical Products <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">
-                                    at GJ PHARMACEUTICALS
+                                    at G J Pharmaceuticals LLP
                                 </span>
                             </h1>
 
                             <p className="text-xl text-gray-200 mb-8 leading-relaxed max-w-3xl mx-auto">
-                                As a leading pharmaceutical manufacturer, we are dedicated to delivering top-quality pharmaceutical products that meet global standards of excellence. With a commitment to innovation, quality, and customer satisfaction, we strive to be your trusted partner in healthcare. Discover our comprehensive range of high-quality pharmaceutical products at <span className="font-semibold text-white">GJ PHARMACEUTICALS</span>, manufactured under stringent quality standards in our WHO-GMP certified facilities.
+                                As a leading pharmaceutical manufacturer, we are dedicated to delivering top-quality pharmaceutical products that meet global standards of excellence. With a commitment to innovation, quality, and customer satisfaction, we strive to be your trusted partner in healthcare. Discover our comprehensive range of high-quality pharmaceutical products at <span className="font-semibold text-white">G J Pharmaceuticals LLP</span>, manufactured under stringent quality standards in our WHO-GMP certified facilities.
                             </p>
 
                             <div className="flex flex-wrap justify-center gap-4">
@@ -452,7 +452,7 @@ const PharmaceuticalProducts = () => {
                                             {/* Decorative glow */}
                                             <div className="absolute top-0 right-0 w-64 h-64 bg-slate-800/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-slate-700/50 transition-colors"></div>
 
-                                            <h3 className="text-2xl font-bold mb-8 text-[#FF6B00] relative z-10">Why Choose GJ PHARMACEUTICALS?</h3>
+                                            <h3 className="text-2xl font-bold mb-8 text-[#FF6B00] relative z-10">Why Choose G J Pharmaceuticals LLP?</h3>
                                             <ul className="space-y-6 relative z-10">
                                                 <li className="flex gap-4 group/item">
                                                     <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/item:bg-[#FF6B00] transition-colors">
@@ -492,7 +492,7 @@ const PharmaceuticalProducts = () => {
                                             "Experience the difference that commitment to quality, innovation, and patient well-being can make in healthcare."
                                         </p>
                                         <p className="text-[#FF6B00] font-bold text-lg bg-orange-100/50 inline-block px-6 py-2 rounded-full">
-                                            Choose GJ PHARMACEUTICALS for pharmaceutical products that prioritize health and elevate the standard of care.
+                                            Choose G J Pharmaceuticals LLP for pharmaceutical products that prioritize health and elevate the standard of care.
                                         </p>
                                     </div>
                                 </div>

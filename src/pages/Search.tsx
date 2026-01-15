@@ -11,7 +11,7 @@ import PageWrapper from '@/components/PageWrapper';
 // Searchable content index
 const searchIndex = [
     // Main Pages
-    { title: "Home", path: "/", category: "Page", description: "Welcome to GJ PHARMACEUTICALS - Leading Pharmaceutical Manufacturer" },
+    { title: "Home", path: "/", category: "Page", description: "Welcome to G J Pharmaceuticals LLP - Leading Pharmaceutical Manufacturer" },
     { title: "About Us", path: "/about", category: "Company", description: "Learn about our history, mission, and values." },
     { title: "Contact Us", path: "/contact", category: "Company", description: "Get in touch with us for inquiries and support." },
     { title: "Research & Development", path: "/research", category: "Innovation", description: "Our state-of-the-art R&D facilities and commitment to innovation." },
@@ -63,7 +63,7 @@ const Search = () => {
         <PageWrapper>
             <Seo
                 title={`Search Results for "${query}"`}
-                description="Search results for GJ PHARMACEUTICALS website."
+                description="Search results for G J Pharmaceuticals LLP website."
                 keywords={`search, ${query}, pharma products`}
             />
             <Navbar />

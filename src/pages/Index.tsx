@@ -36,12 +36,12 @@ const Index = () => {
     <PageWrapper>
       <Seo
         title="Home"
-        description="GJ PHARMACEUTICALS LLP - Leading Pharmaceutical Manufacturer & Exporter. High-quality tablets, injections, and healthcare products."
+        description="G J Pharmaceuticals LLP - Leading Pharmaceutical Manufacturer & Exporter. High-quality tablets, injections, and healthcare products."
         jsonLd={[
           {
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "GJ PHARMACEUTICALS LLP",
+            "name": "G J Pharmaceuticals LLP",
             "url": "https://tgpharmz.com",
             "logo": "https://tgpharmz.com/new-logo.png",
             "contactPoint": {
@@ -61,7 +61,7 @@ const Index = () => {
           {
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "name": "GJ PHARMACEUTICALS",
+            "name": "G J Pharmaceuticals LLP",
             "url": "https://tgpharmz.com",
             "potentialAction": {
               "@type": "SearchAction",
@@ -102,10 +102,10 @@ const Index = () => {
               </div>
 
               <h1 className="text-6xl font-extrabold text-primary leading-tight mb-2">
-                GJ
+                G J
               </h1>
               <h1 className="text-3xl md:text-5xl font-extrabold text-primary leading-tight mb-4 text-nowrap">
-                PHARMACEUTICALS
+                Pharmaceuticals
               </h1>
               <h2 className="text-2xl font-semibold text-slate-700 mb-6">
                 LLP

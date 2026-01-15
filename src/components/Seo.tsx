@@ -11,7 +11,7 @@ interface SeoProps {
 
 const Seo = ({
     title,
-    description = "GJ PHARMACEUTICALS LLP - Leading Pharmaceutical Manufacturer & Exporter. WHO-GMP Certified facilities producing high-quality Tablets, Injections, and more.",
+    description = "G J Pharmaceuticals LLP - Leading Pharmaceutical Manufacturer & Exporter. WHO-GMP Certified facilities producing high-quality Tablets, Injections, and more.",
     keywords = "pharmaceutical, manufacturer, exporter, india, generic medicines, third party manufacturing, pharma franchise",
     image = "/og-image.jpg",
     jsonLd
@@ -19,7 +19,7 @@ const Seo = ({
     const { pathname } = useLocation();
     const siteUrl = 'https://tgpharmz.com'; // Replace with actual domain
     const fullUrl = `${siteUrl}${pathname}`;
-    const fullTitle = `${title} | GJ PHARMACEUTICALS`;
+    const fullTitle = `${title} | G J Pharmaceuticals LLP`;
 
     return (
         <Helmet>
