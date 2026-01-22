@@ -20,8 +20,8 @@ const Index = () => {
     { name: t('nav.nutraceutical'), path: '/products/nutraceutical' },
     { name: t('nav.herbal'), path: '/herbal-and-cosmetics' },
     { name: t('nav.foodgrains'), path: '/products/food-grains' },
-    { name: t('nav.chemicals'), path: '/products/chemicals' },
-    { name: t('nav.oil'), path: '/oil-and-lubricants' }
+    // { name: t('nav.chemicals'), path: '/products/chemicals' },
+    // { name: t('nav.oil'), path: '/oil-and-lubricants' }
   ];
 
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 4000 })]);
@@ -101,15 +101,18 @@ const Index = () => {
                 <span className="text-slate-800 font-bold tracking-wider text-sm">{t('hero.welcome')}</span>
               </div>
 
-              <h1 className="text-6xl font-extrabold text-primary leading-tight mb-2">
-                G J
-              </h1>
-              <h1 className="text-3xl md:text-5xl font-extrabold text-primary leading-tight mb-4 text-nowrap">
-                Pharmaceuticals
-              </h1>
-              <h2 className="text-2xl font-semibold text-slate-700 mb-6">
-                LLP
-              </h2>
+              <div className="flex flex-col items-start gap-1 mb-6">
+                <h1 className="text-7xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#F28C1B] to-[#e07b0a] leading-tight flex items-center gap-1 drop-shadow-sm filter">
+                  <span>G</span>
+                  <span>J</span>
+                </h1>
+                <h1 className="text-5xl md:text-6xl font-extrabold text-[#F28C1B] leading-tight text-nowrap drop-shadow-sm">
+                  Pharmaceuticals
+                </h1>
+                <h2 className="text-4xl md:text-5xl font-extrabold text-[#F28C1B] drop-shadow-sm mt-1">
+                  LLP
+                </h2>
+              </div>
 
               <p className="text-slate-600 text-lg mb-8 leading-relaxed">
                 {t('hero.description')}
@@ -149,13 +152,13 @@ const Index = () => {
 
 
         {/* About Us Section */}
-        <section className="relative -mt-20 z-20 pb-20">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative -mt-20 z-20 section-padding pb-0">
+          <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white/80 backdrop-blur-md rounded-[3rem] shadow-2xl p-12 relative overflow-hidden"
+              className="glass-card rounded-[3rem] p-12 relative overflow-hidden"
             >
               {/* Decorative Elements */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-teal-50 rounded-full blur-3xl -z-10 opacity-50"></div>
@@ -189,8 +192,8 @@ const Index = () => {
         </section>
 
         {/* Stats Banner */}
-        <div className="py-10 border-y border-slate-100/50 bg-white/30 backdrop-blur-sm">
-          <div className="container mx-auto px-4">
+        <div className="py-12 border-y border-white/50 bg-white/30 backdrop-blur-md relative z-10 my-12">
+          <div className="container-custom">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {[
                 { number: "25+", text: t('stats.years') },
@@ -208,12 +211,10 @@ const Index = () => {
         </div>
 
         {/* Our Expertise Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <span className="text-blue-600 font-bold text-sm uppercase tracking-widest bg-blue-50 px-4 py-1 rounded-full">{t('offer.title')}</span>
-              <h2 className="text-4xl font-bold text-slate-900 mt-4 mb-4">{t('services.title')}</h2>
-              <p className="text-slate-600 max-w-2xl mx-auto">{t('services.subtitle')}</p>
+        <section className="section-padding">
+          <div className="container-custom">
+            <div className="text-center mb-8">
+              <h2 className="text-4xl font-bold text-slate-900 mb-4">{t('services.title')}</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center mb-8">
@@ -243,10 +244,10 @@ const Index = () => {
                 </Link>
               ))}
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="flex justify-center gap-8 max-w-4xl mx-auto">
               {[
                 { icon: <Globe2 className="w-8 h-8 text-amber-500" />, title: t('nav.foodgrains'), desc: "Premium quality food grains, edible oils, and authentic spices sourced from trusted suppliers.", link: "/products/food-grains" },
-                { icon: <FlaskConical className="w-8 h-8 text-purple-500" />, title: t('nav.chemicals'), desc: "Industrial and fine chemicals meeting stringent quality standards for various applications.", link: "/oil-and-lubricants" },
+                // { icon: <FlaskConical className="w-8 h-8 text-purple-500" />, title: t('nav.chemicals'), desc: "Industrial and fine chemicals meeting stringent quality standards for various applications.", link: "/oil-and-lubricants" },
               ].map((card, idx) => (
                 <Link
                   key={idx}
@@ -273,9 +274,10 @@ const Index = () => {
         </section>
 
         {/* Excellence Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+        <section className="section-padding bg-secondary/5 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 skew-x-12 pointer-events-none" />
+          <div className="container-custom relative">
+            <div className="text-center mb-20">
               <span className="text-blue-600 font-bold text-sm uppercase tracking-widest bg-blue-50 px-4 py-1 rounded-full">Why Choose Us</span>
               <h2 className="text-4xl font-bold text-slate-900 mt-4 mb-4">{t('excellence.title')}</h2>
               <p className="text-slate-600 max-w-2xl mx-auto">{t('excellence.desc')}</p>
@@ -305,9 +307,9 @@ const Index = () => {
         </section>
 
         {/* Pharmaceutical Products Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+        <section className="section-padding">
+          <div className="container-custom">
+            <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-slate-900 mb-4">{t('nav.pharmaceutical')}</h2>
               <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
             </div>

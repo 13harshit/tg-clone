@@ -45,7 +45,17 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
           >
-            {t('hero.title')}
+            {/* Refined Typography */}
+            <span className="flex flex-col gap-1 items-center justify-center leading-none">
+              <span className="text-[#F28C1B] tracking-tighter flex items-center justify-center text-[1.2em]">
+                <span>G</span>
+                <span className="-ml-5 sm:-ml-7">J</span>
+              </span>
+              <span className="text-[#F28C1B] flex flex-wrap justify-center gap-x-3">
+                <span>Pharmaceuticals</span>
+                <span className="font-extrabold text-[#F28C1B]">LLP</span>
+              </span>
+            </span>
             <span className="block mt-2 gradient-text">For a Healthier World</span>
           </motion.h1>
 

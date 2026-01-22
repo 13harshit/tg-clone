@@ -138,6 +138,10 @@ const translations: Translations = {
     en: 'Read More', hi: 'और पढ़ें', es: 'Leer Más', fr: 'Lire Plus', de: 'Mehr Lesen', ar: 'قراءة المزيد', zh: '阅读更多',
     af: 'Lees Meer', be: 'Чытаць далей', ca: 'Llegeix més', nl: 'Lees meer', id: 'Baca Selengkapnya', it: 'Leggi di più', ja: '続きを読む', ko: '더 읽기', la: 'Lege Plura', pt: 'Leia Mais', ru: 'Читать далее', tr: 'Daha Fazla Oku', uk: 'Читати далі', vi: 'Đọc thêm'
   },
+  'common.learnMore': {
+    en: 'Learn More', hi: 'और जानें', es: 'Aprende Más', fr: 'En Savoir Plus', de: 'Mehr Erfahren', ar: 'اعرف المزيد', zh: '了解更多',
+    af: 'Leer Meer', be: 'Даведацца больш', ca: 'Saber-ne més', nl: 'Meer Leren', id: 'Pelajari Lebih Lanjut', it: 'Saperne di più', ja: 'もっと詳しく', ko: '자세히 알아보기', la: 'Disce Plus', pt: 'Saiba Mais', ru: 'Узнать больше', tr: 'Daha Fazla Bilgi', uk: 'Дізнатися більше', vi: 'Tìm hiểu thêm'
+  },
 
   // About Section
   'about.title': {

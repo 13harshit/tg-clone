@@ -3,6 +3,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { CTASection } from '@/components/home/CTASection';
 import { Globe, Users, Handshake, Truck, Laptop, Award, TrendingUp } from 'lucide-react';
+import NetworkMap from '@/components/NetworkMap';
 
 const SalesDistribution = () => {
     const features = [
@@ -138,6 +139,8 @@ const SalesDistribution = () => {
                     </div>
                 </div>
             </section>
+
+            <NetworkMap />
 
             <CTASection />
             <Footer />

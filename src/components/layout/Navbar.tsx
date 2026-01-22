@@ -5,6 +5,10 @@ import { Menu, X, Search, ChevronDown, ChevronRight, Globe } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import { useLanguage, languages } from '@/hooks/useLanguage';
 
+// Define the gradient class for reuse or just inline it
+const headerGradient = "bg-gradient-to-r from-[#ACE1AF] via-[#F0FFF0] to-[#D0F0C0]";
+
+
 interface SubMenuItem {
   label: string;
   href: string;
@@ -79,8 +83,8 @@ export const Navbar = () => {
         { label: t('nav.nutraceutical'), href: '/products/nutraceutical' },
         { label: t('nav.herbal'), href: '/herbal-and-cosmetics' },
         { label: t('nav.foodgrains'), href: '/products/food-grains' },
-        { label: t('nav.chemicals'), href: '/products/chemicals' },
-        { label: t('nav.oil'), href: '/oil-and-lubricants' }
+        // { label: t('nav.chemicals'), href: '/products/chemicals' },
+        // { label: t('nav.oil'), href: '/oil-and-lubricants' }
       ]
     },
     { label: t('nav.rd'), href: '/research' },
@@ -92,7 +96,8 @@ export const Navbar = () => {
         { label: t('nav.manufacturing'), href: '/facilities/manufacturing' },
         { label: t('nav.export'), href: '/facilities/export' },
         { label: t('nav.sales'), href: '/facilities/sales' },
-        { label: t('nav.contract'), href: '/facilities/contract' }
+        { label: t('nav.contract'), href: '/facilities/contract' },
+        { label: 'Annual Capacity', href: '/facilities/capacity' }
       ]
     },
     { label: t('nav.contact'), href: '/contact' },
@@ -116,7 +121,7 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-secondary/95 backdrop-blur-md shadow-sm py-2`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${headerGradient} backdrop-blur-md shadow-sm py-2`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
@@ -138,7 +143,7 @@ export const Navbar = () => {
               >
                 <Link
                   to={item.href}
-                  className="flex items-center text-sm font-medium text-white/90 hover:text-primary transition-colors py-2"
+                  className="flex items-center text-sm font-medium text-secondary hover:text-primary transition-colors py-2"
                 >
                   {item.label}
                   {item.hasDropdown && (
@@ -202,10 +207,10 @@ export const Navbar = () => {
               onMouseEnter={() => setIsLanguageOpen(true)}
               onMouseLeave={() => setIsLanguageOpen(false)}
             >
-              <button className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors border border-dashed border-white/30">
-                <span className="text-lg">{currentLanguage.flag}</span>
-                <span className="text-sm font-medium text-white/90">{currentLanguage.name}</span>
-                <ChevronDown className="w-4 h-4 text-white/70 group-hover:rotate-180 transition-transform" />
+              <button className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-secondary/10 transition-colors border border-dashed border-[#2f6a54]/30">
+                <span className="text-lg font-bold" style={{ color: 'hsl(163 33% 36%)' }}>{currentLanguage.code === 'en' ? 'EN' : currentLanguage.code.toUpperCase()}</span>
+                <span className="text-sm font-medium" style={{ color: 'hsl(163 33% 36%)' }}>{currentLanguage.name}</span>
+                <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform" style={{ color: 'hsl(163 33% 36%)' }} />
               </button>
 
               <AnimatePresence>
@@ -249,7 +254,7 @@ export const Navbar = () => {
                 />
                 <button
                   onClick={handleSearch}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-white/70 hover:text-primary transition-colors"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-secondary/70 hover:text-primary transition-colors"
                 >
                   <Search className="w-4 h-4" />
                 </button>
@@ -261,7 +266,7 @@ export const Navbar = () => {
           <div className="flex lg:hidden items-center space-x-4">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-primary transition-colors p-2"
+              className="text-secondary hover:text-primary transition-colors p-2"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -378,6 +383,6 @@ export const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </nav >
   );
 };

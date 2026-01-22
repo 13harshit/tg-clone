@@ -25,6 +25,7 @@ import HerbalAndCosmetics from "./pages/HerbalAndCosmetics";
 import Nutraceuticals from "./pages/Nutraceuticals";
 import FoodGrains from "./pages/FoodGrains";
 import Chemicals from "./pages/Chemicals";
+import Capacity from "./pages/Capacity";
 import NotFound from "./pages/NotFound";
 import PharmaceuticalProducts from "./pages/products/pharmaceutical/PharmaceuticalProducts";
 import GeneralProducts from "./pages/products/pharmaceutical/GeneralProducts";
@@ -100,6 +101,7 @@ const App = () => (
               <Route path="/facilities/export" element={<Export />} />
               <Route path="/facilities/sales" element={<SalesDistribution />} />
               <Route path="/facilities/contract" element={<ContractManufacturing />} />
+              <Route path="/facilities/capacity" element={<Capacity />} />
               <Route path="/facilities/:type" element={<Facilities />} />
               <Route path="/contact" element={<Contact />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

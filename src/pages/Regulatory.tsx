@@ -27,8 +27,8 @@ const Regulatory = () => {
                         {/* Left Image Side */}
                         <div className="md:w-1/2 h-64 md:h-auto relative">
                             <img
-                                // Using a placeholder that looks like an office/document setting since specific image isn't available
-                                src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                                // Using user provided regulatory image
+                                src="/regulatory.png"
                                 alt="Regulatory Affairs"
                                 className="w-full h-full object-cover"
                             />

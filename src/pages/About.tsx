@@ -27,7 +27,7 @@ const About = () => {
   // To make it look translated contextually, I'll translate the Headers and Descriptions I added.
 
   const companyDetails = [
-    { label: t('fact.ceo'), value: 'Mr. Dhiraj Rathod' },
+    { label: t('fact.ceo'), value: 'Mr. Dhieraj Rathod' },
     { label: t('fact.est'), value: '2017' },
     { label: t('fact.nature'), value: t('fact.natureVal') },
     { label: t('fact.employees'), value: '10' },
@@ -92,29 +92,31 @@ const About = () => {
       {/* Hero / Welcome Section */}
       <section
         ref={heroRef}
-        className="relative pt-32 pb-20 overflow-hidden"
+        className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-b from-secondary/5 to-transparent"
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container-custom">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={isHeroInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+              <span className="inline-block px-5 py-2 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wider mb-8 border border-primary/20">
                 {t('aboutPage.badge')}
               </span>
-              <h1 className="text-4xl sm:text-5xl font-bold text-slate-800 mb-6 leading-tight">
+              <h1 className="font-heading text-5xl sm:text-6xl font-bold text-foreground mb-8 leading-tight">
                 {t('aboutPage.welcome')} <br />
-                <span className="text-primary">G J Pharmaceuticals LLP</span>
+                <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">G J Pharmaceuticals LLP</span>
               </h1>
-              <p className="text-slate-600 text-lg mb-6 leading-relaxed">
+              <p className="text-muted-foreground text-xl mb-8 leading-relaxed">
                 {t('aboutPage.intro')}
               </p>
-              <p className="text-slate-600 mb-6 leading-relaxed">
-                {t('aboutPage.founder')}
-              </p>
-              <p className="text-slate-600 leading-relaxed">
+              <div className="pl-6 border-l-4 border-primary/20 mb-8">
+                <p className="text-slate-700 italic text-lg leading-relaxed">
+                  "{t('aboutPage.founder')}"
+                </p>
+              </div>
+              <p className="text-muted-foreground leading-relaxed text-lg">
                 {t('about.description')}
               </p>
             </motion.div>
@@ -125,7 +127,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative"
             >
-              <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-white relative bg-slate-100">
+              <div className="aspect-video rounded-[2rem] overflow-hidden shadow-2xl border-[6px] border-white relative bg-slate-100 transform rotate-2 hover:rotate-0 transition-transform duration-500">
                 <AnimatePresence mode='wait'>
                   <motion.img
                     key={currentImageIndex}
@@ -140,43 +142,43 @@ const About = () => {
                   />
                 </AnimatePresence>
 
-                {/* Carousel Indicators */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                {/* Modern Carousel Indicators */}
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-10 bg-black/20 backdrop-blur-md px-4 py-2 rounded-full">
                   {heroImages.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
-                      className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentImageIndex
-                        ? 'bg-white w-6'
-                        : 'bg-white/50 hover:bg-white/80'
+                      className={`h-2 rounded-full transition-all duration-300 ${index === currentImageIndex
+                        ? 'bg-white w-8'
+                        : 'bg-white/40 w-2 hover:bg-white/60'
                         }`}
                       aria-label={`Go to slide ${index + 1}`}
                     />
                   ))}
                 </div>
               </div>
-              <div className="absolute -bottom-6 -left-6 z-[-1] w-24 h-24 bg-primary/20 rounded-full blur-xl" />
-              <div className="absolute -top-6 -right-6 z-[-1] w-32 h-32 bg-teal-500/20 rounded-full blur-xl" />
+              <div className="absolute -bottom-10 -left-10 z-[-1] w-40 h-40 bg-primary/20 rounded-full blur-3xl opacity-60" />
+              <div className="absolute -top-10 -right-10 z-[-1] w-48 h-48 bg-teal-500/20 rounded-full blur-3xl opacity-60" />
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8">
+      <section className="section-padding">
+        <div className="container-custom">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="p-8 rounded-2xl bg-white/50 backdrop-blur-sm border border-slate-100 hover:shadow-lg transition-all"
+              className="glass-card p-10 rounded-[2rem] hover:shadow-xl transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-                <Target className="w-7 h-7 text-primary" />
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
+                <Target className="w-8 h-8 text-primary" />
               </div>
-              <h2 className="text-2xl font-bold text-slate-800 mb-4">{t('aboutPage.missionTitle')}</h2>
-              <p className="text-slate-600 leading-relaxed">
+              <h2 className="text-3xl font-bold text-slate-800 mb-4">{t('aboutPage.missionTitle')}</h2>
+              <p className="text-slate-600 leading-relaxed text-lg">
                 {t('aboutPage.missionDesc')}
               </p>
             </motion.div>
@@ -186,13 +188,13 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="p-8 rounded-2xl bg-white/50 backdrop-blur-sm border border-slate-100 hover:shadow-lg transition-all"
+              className="glass-card p-10 rounded-[2rem] hover:shadow-xl transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-xl bg-teal-500/10 flex items-center justify-center mb-6">
-                <Eye className="w-7 h-7 text-teal-600" />
+              <div className="w-16 h-16 rounded-2xl bg-teal-500/10 flex items-center justify-center mb-6">
+                <Eye className="w-8 h-8 text-teal-600" />
               </div>
-              <h2 className="text-2xl font-bold text-slate-800 mb-4">{t('aboutPage.visionTitle')}</h2>
-              <p className="text-slate-600 leading-relaxed">
+              <h2 className="text-3xl font-bold text-slate-800 mb-4">{t('aboutPage.visionTitle')}</h2>
+              <p className="text-slate-600 leading-relaxed text-lg">
                 {t('aboutPage.visionDesc')}
               </p>
             </motion.div>
@@ -201,27 +203,31 @@ const About = () => {
       </section>
 
       {/* Content Sections: Client Satisfaction, Team, Strengths */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+      <section className="section-padding pt-0">
+        <div className="container-custom space-y-24">
 
           {/* Client Satisfaction */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold text-slate-800 mb-6 flex items-center gap-3">
-                <Trophy className="w-8 h-8 text-primary" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-orange-50 text-orange-600 font-semibold mb-6">
+                <Trophy className="w-5 h-5" />
+                <span>Excellence in Service</span>
+              </div>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">
                 {t('aboutPage.clientSatTitle')}
               </h2>
-              <p className="text-slate-600 leading-relaxed text-lg">
+              <p className="text-slate-600 leading-relaxed text-xl">
                 {t('aboutPage.clientSatDesc')}
               </p>
             </motion.div>
-            <div className="hidden md:block h-64 bg-slate-200 rounded-2xl animate-pulse">
-              {/* Placeholder for an illustration or image if desired, keeping purely decorative for now */}
-              <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center rounded-2xl opacity-80 mix-blend-multiply"></div>
+            <div className="hidden md:block h-[400px] rounded-[2.5rem] relative group">
+              <div className="absolute inset-0 bg-primary/20 rounded-[2.5rem] transform rotate-3 scale-95 transition-transform duration-500 group-hover:rotate-6"></div>
+              {/* Illustration or image */}
+              <div className="w-full h-full bg-[url('/client-satisfaction.png')] bg-cover bg-center rounded-[2.5rem] opacity-90 shadow-2xl relative z-10 transform transition-transform duration-500 group-hover:-translate-y-2"></div>
             </div>
           </div>
 
@@ -254,23 +260,46 @@ const About = () => {
               viewport={{ once: true }}
               className="bg-white/50 backdrop-blur-sm p-8 rounded-2xl shadow-sm border border-slate-100"
             >
-              <h2 className="text-3xl font-bold text-slate-800 mb-6 flex items-center gap-3">
-                <Briefcase className="w-8 h-8 text-indigo-600" />
-                {t('aboutPage.strengthsTitle')}
-              </h2>
-              <p className="text-slate-600 leading-relaxed text-lg">
-                {t('aboutPage.strengthsDesc')}
-              </p>
+              {/* Our Story */}
+              <div className="mb-10">
+                <h2 className="text-3xl font-bold text-slate-800 mb-2 flex items-center gap-3">
+                  <Briefcase className="w-8 h-8 text-indigo-600" />
+                  Our Story: Growth With Bliss
+                </h2>
+                <h3 className="text-xl text-indigo-600 font-semibold mb-4">From 2017 Origins to Global Diversification.</h3>
+                <p className="text-slate-600 leading-relaxed text-lg text-justify">
+                  Established in 2017, GJ Pharmaceuticals LLP began with a vision to bridge high-science manufacturing with holistic well-being. Guided by our philosophy of "Growth With Bliss," we have rapidly evolved from a medicinal supplier into a diversified global powerhouse. Today, we stand unique in the industry—delivering precision excellence across Pharmaceuticals, Nutraceuticals, Herbal Cosmetics, and Industrial Lubricants under one roof.
+                </p>
+              </div>
+
+              {/* Core Strengths */}
+              <div>
+                <h3 className="text-2xl font-bold text-slate-800 mb-6">Our Core Strengths</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {[
+                    { title: "Diverse Expertise", desc: "A rare ability to engineer both life-saving sterile Injectables and high-performance Industrial Fluids with equal precision." },
+                    { title: "R&D Powerhouse", desc: "Backed by 50+ scientists and a state-of-the-art research center dedicated to complex formulation and innovation." },
+                    { title: "Uncompromising Quality", desc: "We adhere strictly to cGMP and global regulatory standards, ensuring every batch meets the highest safety benchmarks." },
+                    { title: "Global Reach", desc: "A robust supply chain that delivers our trusted solutions to partners worldwide, ensuring reliability beyond borders." }
+                  ].map((item, idx) => (
+                    <div key={idx} className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                      <h4 className="font-bold text-lg text-slate-800 mb-2">{item.title}</h4>
+                      <p className="text-slate-600">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Product Showcase Section */}
-      <section className="py-20 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-padding bg-slate-50 overflow-hidden relative">
+        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-background to-transparent" />
+        <div className="container-custom">
           <div className="w-full">
-            <div className="grid md:grid-cols-2 gap-8 mb-8 items-stretch">
+            <div className="grid md:grid-cols-2 gap-12 mb-16 items-stretch">
               {/* Left Column: Facility Images + Icons */}
               <div className="flex flex-col gap-6">
                 {/* Facility Carousel */}
@@ -373,26 +402,26 @@ const About = () => {
       </section>
 
       {/* Why Us */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-padding">
+        <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="text-center max-w-3xl mx-auto mb-20"
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-              {t('excellence.title')}
+            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wider mb-4">
+              WHY CHOOSE US
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold text-slate-800 mb-6 font-heading">
               {t('excellence.title')}
             </h2>
-            <p className="text-slate-600">
+            <p className="text-muted-foreground text-xl">
               {t('excellence.desc')}
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyUsPoints.map((point, index) => (
               <motion.div
                 key={index}
@@ -400,12 +429,12 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="flex items-center gap-4 p-6 rounded-xl bg-white/50 backdrop-blur-sm border border-slate-100 hover:border-primary/30 transition-colors"
+                className="flex items-center gap-5 p-8 rounded-2xl bg-white border border-slate-100 hover:border-primary/30 hover:shadow-lg transition-all"
               >
-                <div className="min-w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                  <CheckCircle className="w-4 h-4 text-primary" />
+                <div className="min-w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <CheckCircle className="w-5 h-5 text-primary" />
                 </div>
-                <span className="font-medium text-slate-700">{point}</span>
+                <span className="font-semibold text-slate-700 text-lg">{point}</span>
               </motion.div>
             ))}
           </div>
@@ -413,29 +442,33 @@ const About = () => {
       </section>
 
       {/* Fact Sheet / Company Details */}
-      <section className="py-20 bg-slate-900 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-padding bg-[#111827] text-white relative overflow-hidden">
+        {/* Background Gradients */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[100px] pointer-events-none" />
+
+        <div className="container-custom relative">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
+            className="max-w-5xl mx-auto"
           >
-            <h2 className="text-3xl font-bold mb-12 text-center flex items-center justify-center gap-3">
-              <Globe className="w-8 h-8 text-primary" />
+            <h2 className="text-4xl font-bold mb-16 text-center flex items-center justify-center gap-4">
+              <Globe className="w-10 h-10 text-primary" />
               {t('fact.sheetTitle')}
             </h2>
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10">
+            <div className="glass-dark-card rounded-[2rem] overflow-hidden">
               <div className="grid grid-cols-1">
                 {companyDetails.map((detail, index) => (
                   <div
                     key={index}
-                    className={`grid md:grid-cols-2 p-6 transition-colors hover:bg-white/5 ${index !== companyDetails.length - 1 ? 'border-b border-white/10' : ''}`}
+                    className={`grid md:grid-cols-2 p-8 transition-colors hover:bg-white/5 ${index !== companyDetails.length - 1 ? 'border-b border-white/10' : ''}`}
                   >
-                    <div className="font-semibold text-slate-300 md:text-right md:pr-8 mb-2 md:mb-0">
+                    <div className="font-medium text-slate-300 md:text-right md:pr-12 mb-2 md:mb-0 text-lg uppercase tracking-wide">
                       {detail.label}
                     </div>
-                    <div className="font-bold text-white md:pl-8 text-lg border-l-0 md:border-l border-white/10">
+                    <div className="font-bold text-white md:pl-12 text-xl border-l-0 md:border-l border-white/10 font-heading">
                       {detail.value}
                     </div>
                   </div>

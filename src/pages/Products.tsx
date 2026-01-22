@@ -88,9 +88,10 @@ const Products = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-b from-secondary to-background overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-gradient-to-b from-secondary/5 to-transparent overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
         </div>
 
         <div className="container-custom relative">
@@ -98,18 +99,18 @@ const Products = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl"
+            className="max-w-4xl"
           >
-            <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
-              <Icon className="w-8 h-8 text-primary" />
+            <div className="w-20 h-20 rounded-3xl bg-white border border-slate-100 shadow-lg flex items-center justify-center mb-8">
+              <Icon className="w-10 h-10 text-primary" />
             </div>
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wider mb-6">
               Our Products
             </span>
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
               {currentCategory.title}
             </h1>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <p className="text-muted-foreground text-xl leading-relaxed max-w-2xl">
               {currentCategory.description}
             </p>
           </motion.div>
@@ -117,24 +118,27 @@ const Products = () => {
       </section>
 
       {/* Products Grid */}
-      <section className="py-20">
+      <section className="section-padding">
         <div className="container-custom">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 section-gap">
             {currentCategory.products.map((product, index) => (
               <motion.div
                 key={product.name}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-soft-lg transition-all duration-300"
+                className="group p-8 rounded-[2rem] bg-white border border-slate-100 hover:border-primary/20 shadow-sm hover:shadow-xl transition-all duration-300 relative overflow-hidden"
               >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <FlaskConical className="w-6 h-6 text-white" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full transform translate-x-16 -translate-y-16 group-hover:bg-primary/10 transition-colors" />
+
+                <div className="w-14 h-14 rounded-2xl bg-secondary/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <FlaskConical className="w-7 h-7 text-secondary group-hover:text-primary transition-colors" />
                 </div>
-                <h3 className="font-heading text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+
+                <h3 className="font-heading text-2xl font-bold text-slate-800 mb-3 group-hover:text-primary transition-colors">
                   {product.name}
                 </h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-slate-500 leading-relaxed text-lg">
                   {product.description}
                 </p>
               </motion.div>
