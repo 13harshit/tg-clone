@@ -4,20 +4,32 @@ import { Footer } from '@/components/layout/Footer';
 
 const qualityPoints = [
     {
-        title: "Quality Assurance",
-        description: "We uphold uncompromising standards of quality across all our product categories."
+        title: "Regulatory Compliance",
+        description: "We strictly adhere to global regulatory frameworks, including cGMP (Current Good Manufacturing Practices) and ISO standards, ensuring every product meets international safety benchmarks."
     },
     {
-        title: "Reliability",
-        description: "Count on us for timely deliveries and consistent product excellence."
+        title: "Rigorous Testing",
+        description: "Our state-of-the-art laboratories utilize advanced analytical techniques (HPLC, GC) to perform comprehensive testing on raw materials and finished goods, guaranteeing purity and potency."
     },
     {
-        title: "Global Reach",
-        description: "Our products reach clients worldwide, fulfilling diverse industry requirements."
+        title: "Sustainable Practices",
+        description: "We are committed to eco-conscious manufacturing, minimizing waste and utilizing energy-efficient processes to protect the environment while delivering superior products."
     },
     {
-        title: "Customer Satisfaction",
-        description: "Your satisfaction is our priority, and we strive for excellence in every interaction."
+        title: "Continuous Improvement",
+        description: "Through regular internal audits and feedback loops, we constantly refine our manufacturing processes to enhance efficiency, safety, and product consistency."
+    },
+    {
+        title: "Ethical Sourcing",
+        description: "We maintain a transparent supply chain, sourcing high-grade raw materials only from verified and ethical suppliers to ensure the integrity of our final formulations."
+    },
+    {
+        title: "Custom Formulation",
+        description: "Leveraging our R&D capabilities, we offer tailored solutions and Contract Manufacturing services to meet the specific technical specifications of our partners."
+    },
+    {
+        title: "Safety Protocols",
+        description: "We prioritize the health and safety of our workforce and end-users by implementing stringent safety protocols across all manufacturing and handling stages."
     }
 ];
 
@@ -32,7 +44,7 @@ const QualityControl = () => {
                     <div className="relative rounded-3xl overflow-hidden min-h-[600px] shadow-2xl flex flex-col md:flex-row">
 
                         {/* Image Section */}
-                        <div className="md:w-3/5 relative min-h-[400px]">
+                        <div className="md:w-1/2 relative min-h-[400px]">
                             <img
                                 src="/quality-control.jpg"
                                 alt="Quality Control Specialist"
@@ -42,7 +54,7 @@ const QualityControl = () => {
                         </div>
 
                         {/* Content Section - Styled as the dark green card overlapping or adjacent */}
-                        <div className="md:w-2/5 bg-secondary p-8 md:p-12 flex flex-col justify-center relative">
+                        <div className="md:w-1/2 bg-secondary p-8 md:p-12 flex flex-col justify-center relative">
                             {/* Overlap effect for desktop if desired, but side-by-side works well too. 
                    To match the screenshot's 'floating card' look more closely, we can adjust.
                    Let's keep it side-by-side for responsiveness but style the container seamlessly. 

@@ -33,102 +33,134 @@ const SoftGelCapsules = () => {
             <Navbar />
 
             <main className="flex-grow">
-                <section className="relative pt-32 pb-20 overflow-hidden">
+                <section className="relative pt-24 pb-12 overflow-hidden">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl mx-auto text-center">
-                            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="max-w-4xl mx-auto text-center"
+                        >
+                            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1.5 rounded-full mb-4">
                                 <Pill className="w-4 h-4" />
                                 <span className="text-sm font-semibold">Advanced Delivery System</span>
                             </div>
-                            <h1 className="text-5xl font-bold text-slate-900 mb-6">Soft Gel Capsules</h1>
-                            <p className="text-xl text-slate-600 leading-relaxed">Premium soft gelatin capsules offering superior bioavailability and patient compliance.</p>
+                            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Soft Gel Capsules</h1>
+                            <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">Premium soft gelatin capsules offering superior bioavailability and patient compliance.</p>
                         </motion.div>
                     </div>
                 </section>
 
-                <section className="py-20">
+                <section className="py-12">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-6xl mx-auto">
-                            <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                                <div className="bg-gradient-to-r from-secondary to-primary px-8 py-6">
-                                    <h2 className="text-2xl font-bold text-white">Soft Gel Capsules Product List</h2>
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden"
+                            >
+                                <div className="bg-gradient-to-r from-secondary to-primary px-6 py-4">
+                                    <h2 className="text-xl font-bold text-white">Soft Gel Capsules Product List</h2>
                                 </div>
                                 <div className="overflow-x-auto">
                                     <table className="w-full">
                                         <thead className="bg-secondary/5 border-b-2 border-slate-200">
                                             <tr>
-                                                <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">S.No.</th>
-                                                <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Product Name</th>
-                                                <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Packing</th>
+                                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">S.No.</th>
+                                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Product Name</th>
+                                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Packing</th>
                                             </tr>
                                         </thead>
                                         <tbody className="divide-y divide-slate-100">
                                             {products.map((product, index) => (
-                                                <motion.tr key={product.sno} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.02 }} className="hover:bg-primary/5 transition-colors">
-                                                    <td className="px-6 py-4 text-sm text-slate-600">{product.sno}</td>
-                                                    <td className="px-6 py-4 text-sm font-medium text-slate-900">{product.name}</td>
-                                                    <td className="px-6 py-4 text-sm text-slate-600">{product.packing}</td>
+                                                <motion.tr
+                                                    key={product.sno}
+                                                    initial={{ opacity: 0, y: 10 }}
+                                                    whileInView={{ opacity: 1, y: 0 }}
+                                                    viewport={{ once: true, margin: "-50px" }}
+                                                    transition={{ duration: 0.3, delay: index * 0.02 }}
+                                                    className="hover:bg-primary/5 transition-colors"
+                                                >
+                                                    <td className="px-4 py-3 text-sm text-slate-600">{product.sno}</td>
+                                                    <td className="px-4 py-3 text-sm font-medium text-slate-900">{product.name}</td>
+                                                    <td className="px-4 py-3 text-sm text-slate-600">{product.packing}</td>
                                                 </motion.tr>
                                             ))}
                                         </tbody>
                                     </table>
                                 </div>
-                            </div>
-                            <div className="mt-8 bg-gradient-to-br from-primary/5 to-orange-50/50 rounded-xl p-6 border border-primary/10">
+                            </motion.div>
+                            <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="mt-6 bg-gradient-to-br from-primary/5 to-orange-50/50 rounded-xl p-4 border border-primary/10"
+                            >
                                 <p className="text-sm text-slate-700">
                                     <span className="font-semibold text-primary">Note:</span> All soft gel capsules are manufactured using advanced rotary die encapsulation technology with precision fill weight control.
                                 </p>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </section>
 
                 {/* Soft Gel Featured Products List */}
-                <section className="py-20 border-t border-slate-100/50">
+                <section className="py-12 border-t border-slate-100/50">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="max-w-6xl mx-auto space-y-16">
+                        <div className="max-w-6xl mx-auto space-y-8">
 
-                            <div className="text-center mb-12">
+                            <div className="text-center mb-8">
                                 <h2 className="text-3xl font-bold text-slate-900">Featured Soft Gel Products</h2>
-                                <div className="w-20 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+                                <div className="w-16 h-1 bg-primary mx-auto mt-3 rounded-full"></div>
                             </div>
 
-                            <div className="space-y-12">
+                            <div className="space-y-6">
                                 {/* Item 1: Vitamin A 200k */}
-                                <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                                    <h3 className="text-2xl font-bold text-slate-900 mb-4">Vitamin A Capsules 2,00,000 I.U.</h3>
-                                    <p className="text-slate-600 leading-relaxed mb-6">
+                                <motion.div
+                                    initial={{ opacity: 0, y: 15 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.4 }}
+                                    className="bg-white rounded-xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow"
+                                >
+                                    <h3 className="text-xl font-bold text-slate-900 mb-3">Vitamin A Capsules 2,00,000 I.U.</h3>
+                                    <p className="text-slate-600 leading-relaxed mb-4 text-sm">
                                         Soft gel capsules, Vitamin A Capsules 2,00,000 I.U. also known as softgels, are a popular form of oral dosage for medications, supplements, and vitamins. Product Name: Vitamin A Capsules 2,00,000 I.U.
                                     </p>
-                                    <Link to="/products/pharmaceutical/softgel/vitamin-a-200k" className="inline-flex items-center text-primary font-semibold hover:text-orange-700 transition-colors group">
+                                    <Link to="/products/pharmaceutical/softgel/vitamin-a-200k" className="inline-flex items-center text-primary text-sm font-semibold hover:text-orange-700 transition-colors group">
                                         Read More
                                         <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                         </svg>
                                     </Link>
-                                </div>
+                                </motion.div>
 
                                 {/* Item 2: Vitamin A 100k */}
-                                <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                                    <h3 className="text-2xl font-bold text-slate-900 mb-4">Vitamin A Capsules 1,00,000 I.U.</h3>
-                                    <p className="text-slate-600 leading-relaxed mb-6">
+                                <motion.div
+                                    initial={{ opacity: 0, y: 15 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.4, delay: 0.1 }}
+                                    className="bg-white rounded-xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow"
+                                >
+                                    <h3 className="text-xl font-bold text-slate-900 mb-3">Vitamin A Capsules 1,00,000 I.U.</h3>
+                                    <p className="text-slate-600 leading-relaxed mb-4 text-sm">
                                         Soft gel capsules, Vitamin A Capsules 1,00,000 I.U. also known as softgels, are a popular form of oral dosage for medications, supplements, and vitamins. Product Name: Vitamin A Capsules 1,00,000 I.U.
                                     </p>
-                                    <Link to="/products/pharmaceutical/softgel/vitamin-a-100k" className="inline-flex items-center text-primary font-semibold hover:text-orange-700 transition-colors group">
+                                    <Link to="/products/pharmaceutical/softgel/vitamin-a-100k" className="inline-flex items-center text-primary text-sm font-semibold hover:text-orange-700 transition-colors group">
                                         Read More
                                         <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                         </svg>
                                     </Link>
-                                </div>
+                                </motion.div>
                             </div>
 
                         </div>
                     </div>
                 </section>
-
-
-
             </main>
             <Footer />
         </div >

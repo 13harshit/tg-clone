@@ -31,79 +31,106 @@ const IVFluids = () => {
         <div className="min-h-screen flex flex-col">
             <Navbar />
             <main className="flex-grow">
-                <section className="relative pt-32 pb-20">
+                <section className="relative pt-24 pb-12">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl mx-auto text-center">
-                            <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full mb-6">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="max-w-4xl mx-auto text-center"
+                        >
+                            <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-3 py-1.5 rounded-full mb-4">
                                 <Droplet className="w-4 h-4" />
                                 <span className="text-sm font-semibold">Intravenous Solutions</span>
                             </div>
-                            <h1 className="text-5xl font-bold text-slate-900 mb-6">IV Fluids & Solutions</h1>
-                            <p className="text-xl text-slate-600 leading-relaxed">Sterile intravenous solutions for fluid replacement, electrolyte balance, and medication delivery.</p>
+                            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">IV Fluids & Solutions</h1>
+                            <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">Sterile intravenous solutions for fluid replacement, electrolyte balance, and medication delivery.</p>
                         </motion.div>
                     </div>
                 </section>
 
-                <section className="py-20">
+                <section className="py-12">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-6xl mx-auto">
-                            <div className="bg-white/60 backdrop-blur-md rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                                <div className="bg-gradient-to-r from-secondary to-primary px-8 py-6">
-                                    <h2 className="text-2xl font-bold text-white">IV Fluids Product List</h2>
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                className="bg-white/60 backdrop-blur-md rounded-2xl shadow-lg border border-slate-200 overflow-hidden"
+                            >
+                                <div className="bg-gradient-to-r from-secondary to-primary px-6 py-4">
+                                    <h2 className="text-xl font-bold text-white">IV Fluids Product List</h2>
                                 </div>
                                 <div className="overflow-x-auto">
                                     <table className="w-full">
                                         <thead className="bg-secondary/5 border-b-2 border-slate-200">
                                             <tr>
-                                                <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">S.No.</th>
-                                                <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Product Name</th>
-                                                <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Volume</th>
+                                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">S.No.</th>
+                                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Product Name</th>
+                                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Volume</th>
                                             </tr>
                                         </thead>
                                         <tbody className="divide-y divide-slate-100">
                                             {products.map((product, index) => (
-                                                <motion.tr key={product.sno} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.02 }} className="hover:bg-secondary/5 transition-colors">
-                                                    <td className="px-6 py-4 text-sm text-slate-600">{product.sno}</td>
-                                                    <td className="px-6 py-4 text-sm font-medium text-slate-900">{product.name}</td>
-                                                    <td className="px-6 py-4 text-sm text-slate-600">{product.volume}</td>
+                                                <motion.tr
+                                                    key={product.sno}
+                                                    initial={{ opacity: 0, y: 10 }}
+                                                    whileInView={{ opacity: 1, y: 0 }}
+                                                    viewport={{ once: true, margin: "-50px" }}
+                                                    transition={{ duration: 0.3, delay: index * 0.02 }}
+                                                    className="hover:bg-secondary/5 transition-colors"
+                                                >
+                                                    <td className="px-4 py-3 text-sm text-slate-600">{product.sno}</td>
+                                                    <td className="px-4 py-3 text-sm font-medium text-slate-900">{product.name}</td>
+                                                    <td className="px-4 py-3 text-sm text-slate-600">{product.volume}</td>
                                                 </motion.tr>
                                             ))}
                                         </tbody>
                                     </table>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </section>
 
                 {/* Featured Product Section */}
-                <section className="py-20">
+                <section className="py-12">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="w-full bg-white/60 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden border border-slate-100">
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.98 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5 }}
+                            className="w-full bg-white/60 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden border border-slate-100"
+                        >
                             <div className="flex flex-col md:flex-row items-center">
                                 {/* Product Image */}
-                                <div className="md:w-1/2 p-8 md:p-12 bg-secondary/5 flex items-center justify-center border-r border-slate-100">
-                                    <div className="relative w-full max-w-lg">
+                                <div className="md:w-1/2 p-8 bg-secondary/5 flex items-center justify-center border-r border-slate-100">
+                                    <div className="relative w-full max-w-sm">
                                         <div className="absolute inset-0 bg-secondary/20 rounded-full blur-3xl opacity-30 transform scale-110"></div>
-                                        <img
+                                        <motion.img
+                                            initial={{ y: 20, opacity: 0 }}
+                                            whileInView={{ y: 0, opacity: 1 }}
+                                            transition={{ duration: 0.6 }}
                                             src="/medicine/ChatGPT Image Jan 6, 2026, 02_26_12 PM.png"
                                             alt="Premium IV Infusion"
-                                            className="relative z-10 w-full drop-shadow-2xl transform hover:scale-105 transition-transform duration-500 rounded-xl"
+                                            className="relative z-10 w-full drop-shadow-2xl rounded-xl"
                                         />
                                     </div>
                                 </div>
 
                                 {/* Product Details */}
-                                <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                                <div className="md:w-1/2 p-8 lg:p-10 flex flex-col justify-center">
                                     <div className="mb-6">
-                                        <div className="inline-block px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full mb-4">
-                                            <span className="text-primary font-bold tracking-wider text-xs uppercase">Featured Product</span>
+                                        <div className="inline-block px-3 py-1 bg-primary/10 border border-primary/20 rounded-full mb-3">
+                                            <span className="text-primary font-bold tracking-wider text-[10px] uppercase">Featured Product</span>
                                         </div>
-                                        <h3 className="text-4xl font-bold text-slate-900 mb-2">IV Infusions</h3>
-                                        <p className="text-slate-500 font-medium text-lg">Sterile Intravenous Solutions</p>
+                                        <h3 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">IV Infusions</h3>
+                                        <p className="text-slate-500 font-medium text-base">Sterile Intravenous Solutions</p>
                                     </div>
 
-                                    <div className="space-y-6 mb-8 text-slate-600 leading-relaxed">
+                                    <div className="space-y-4 mb-8 text-slate-600 leading-relaxed text-sm">
                                         <p>
                                             Our range of Intravenous Fluids includes high-quality solutions for hydration, electrolyte replenishment, and parenteral nutrition. Manufactured in state-of-the-art sterile facilities using Blow-Fill-Seal (BFS) technology to ensure zero contamination and patient safety.
                                         </p>
@@ -112,45 +139,45 @@ const IVFluids = () => {
                                         </p>
 
                                         <div>
-                                            <h4 className="text-lg font-bold text-slate-900 mb-3">Key Features:</h4>
+                                            <h4 className="text-base font-bold text-slate-900 mb-2">Key Features:</h4>
                                             <ul className="space-y-2">
                                                 <li className="flex items-center">
-                                                    <span className="w-2 h-2 bg-secondary rounded-full mr-3"></span>
+                                                    <span className="w-1.5 h-1.5 bg-secondary rounded-full mr-2"></span>
                                                     <span>Advanced BFS (Blow-Fill-Seal) Technology bottles</span>
                                                 </li>
                                                 <li className="flex items-center">
-                                                    <span className="w-2 h-2 bg-secondary rounded-full mr-3"></span>
+                                                    <span className="w-1.5 h-1.5 bg-secondary rounded-full mr-2"></span>
                                                     <span>Pyrogen-free and sterile formulations</span>
                                                 </li>
                                                 <li className="flex items-center">
-                                                    <span className="w-2 h-2 bg-secondary rounded-full mr-3"></span>
+                                                    <span className="w-1.5 h-1.5 bg-secondary rounded-full mr-2"></span>
                                                     <span>Leak-proof and collapse-resistant containers</span>
                                                 </li>
                                                 <li className="flex items-center">
-                                                    <span className="w-2 h-2 bg-secondary rounded-full mr-3"></span>
+                                                    <span className="w-1.5 h-1.5 bg-secondary rounded-full mr-2"></span>
                                                     <span>Clearly labeled with graduation marks for accuracy</span>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
 
-                                    <div className="border-t border-slate-100 pt-6 space-y-3">
+                                    <div className="border-t border-slate-100 pt-6 space-y-2 text-sm">
                                         <div className="flex">
-                                            <span className="w-32 text-slate-900 font-bold shrink-0">Standards:</span>
+                                            <span className="w-24 text-slate-900 font-bold shrink-0">Standards:</span>
                                             <span className="text-slate-600">BP / USP / IP</span>
                                         </div>
                                         <div className="flex">
-                                            <span className="w-32 text-slate-900 font-bold shrink-0">Packaging:</span>
+                                            <span className="w-24 text-slate-900 font-bold shrink-0">Packaging:</span>
                                             <span className="text-slate-600">BFS Technology (Bottles)</span>
                                         </div>
                                         <div className="flex">
-                                            <span className="w-32 text-slate-900 font-bold shrink-0">Sterility:</span>
+                                            <span className="w-24 text-slate-900 font-bold shrink-0">Sterility:</span>
                                             <span className="text-slate-600">Pyrogen-free & Sterile</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </section>
             </main>

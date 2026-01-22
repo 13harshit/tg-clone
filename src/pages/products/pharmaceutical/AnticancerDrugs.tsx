@@ -31,84 +31,111 @@ const AnticancerDrugs = () => {
         <div className="min-h-screen flex flex-col">
             <Navbar />
             <main className="flex-grow">
-                <section className="relative pt-32 pb-20">
+                <section className="relative pt-24 pb-12">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl mx-auto text-center">
-                            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="max-w-4xl mx-auto text-center"
+                        >
+                            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1.5 rounded-full mb-4">
                                 <FlaskConical className="w-4 h-4" />
                                 <span className="text-sm font-semibold">Oncology Pharmaceuticals</span>
                             </div>
-                            <h1 className="text-5xl font-bold text-slate-900 mb-6">Anticancer Drugs</h1>
-                            <p className="text-xl text-slate-600 leading-relaxed">Advanced oncology medications for cancer treatment and supportive care.</p>
+                            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Anticancer Drugs</h1>
+                            <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">Advanced oncology medications for cancer treatment and supportive care.</p>
                         </motion.div>
                     </div>
                 </section>
 
-                <section className="py-20">
+                <section className="py-12">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-7xl mx-auto">
-                            <div className="bg-white/60 backdrop-blur-md rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                                <div className="bg-gradient-to-r from-secondary to-primary px-8 py-6">
-                                    <h2 className="text-2xl font-bold text-white">Anticancer Drug Product List</h2>
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                className="bg-white/60 backdrop-blur-md rounded-2xl shadow-lg border border-slate-200 overflow-hidden"
+                            >
+                                <div className="bg-gradient-to-r from-secondary to-primary px-6 py-4">
+                                    <h2 className="text-xl font-bold text-white">Anticancer Drug Product List</h2>
                                 </div>
                                 <div className="overflow-x-auto">
                                     <table className="w-full">
                                         <thead className="bg-secondary/5 border-b-2 border-slate-200">
                                             <tr>
-                                                <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">S.No.</th>
-                                                <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Product Name</th>
-                                                <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Type</th>
-                                                <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Strength</th>
-                                                <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Packing</th>
+                                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">S.No.</th>
+                                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Product Name</th>
+                                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Type</th>
+                                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Strength</th>
+                                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Packing</th>
                                             </tr>
                                         </thead>
                                         <tbody className="divide-y divide-slate-100">
                                             {products.map((product, index) => (
-                                                <motion.tr key={product.sno} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.02 }} className="hover:bg-primary/5 transition-colors">
-                                                    <td className="px-6 py-4 text-sm text-slate-600">{product.sno}</td>
-                                                    <td className="px-6 py-4 text-sm font-medium text-slate-900">{product.name}</td>
-                                                    <td className="px-6 py-4 text-sm text-slate-600">{product.type}</td>
-                                                    <td className="px-6 py-4 text-sm text-slate-600">{product.strength}</td>
-                                                    <td className="px-6 py-4 text-sm text-slate-600">{product.packing}</td>
+                                                <motion.tr
+                                                    key={product.sno}
+                                                    initial={{ opacity: 0, y: 10 }}
+                                                    whileInView={{ opacity: 1, y: 0 }}
+                                                    viewport={{ once: true, margin: "-50px" }}
+                                                    transition={{ duration: 0.3, delay: index * 0.02 }}
+                                                    className="hover:bg-primary/5 transition-colors"
+                                                >
+                                                    <td className="px-4 py-3 text-sm text-slate-600">{product.sno}</td>
+                                                    <td className="px-4 py-3 text-sm font-medium text-slate-900">{product.name}</td>
+                                                    <td className="px-4 py-3 text-sm text-slate-600">{product.type}</td>
+                                                    <td className="px-4 py-3 text-sm text-slate-600">{product.strength}</td>
+                                                    <td className="px-4 py-3 text-sm text-slate-600">{product.packing}</td>
                                                 </motion.tr>
                                             ))}
                                         </tbody>
                                     </table>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </section>
 
                 {/* Featured Product Section */}
-                <section className="py-20">
+                <section className="py-12">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="w-full bg-white/60 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden border border-slate-100">
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.98 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5 }}
+                            className="w-full bg-white/60 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden border border-slate-100"
+                        >
                             <div className="flex flex-col md:flex-row items-center">
-                                <div className="md:w-1/2 p-8 md:p-12 bg-secondary/5 flex items-center justify-center border-r border-slate-100 h-full">
-                                    <div className="relative w-full max-w-lg">
+                                <div className="md:w-1/2 p-8 bg-secondary/5 flex items-center justify-center border-r border-slate-100">
+                                    <div className="relative w-full max-w-sm">
                                         <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl opacity-30 transform scale-110"></div>
-                                        <img
+                                        <motion.img
+                                            initial={{ y: 20, opacity: 0 }}
+                                            whileInView={{ y: 0, opacity: 1 }}
+                                            transition={{ duration: 0.6 }}
                                             src="/medicine/ChatGPT Image Jan 6, 2026, 02_23_44 PM.png"
                                             alt="Peg L Asparaginase Injection"
-                                            className="relative z-10 w-full drop-shadow-2xl transform hover:scale-105 transition-transform duration-500 rounded-xl"
+                                            className="relative z-10 w-full drop-shadow-2xl rounded-xl"
                                         />
                                     </div>
                                 </div>
-                                <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                                <div className="md:w-1/2 p-8 lg:p-10 flex flex-col justify-center">
                                     <div className="mb-6">
-                                        <div className="inline-block px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full mb-4">
-                                            <span className="text-primary font-bold tracking-wider text-xs uppercase">Featured Product</span>
+                                        <div className="inline-block px-3 py-1 bg-primary/10 border border-primary/20 rounded-full mb-3">
+                                            <span className="text-primary font-bold tracking-wider text-[10px] uppercase">Featured Product</span>
                                         </div>
-                                        <h3 className="text-3xl font-bold text-slate-900 mb-2">Peg L Asparaginase Injection</h3>
-                                        <p className="text-primary font-medium text-lg">Advanced Oncology Treatment</p>
+                                        <h3 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">Peg L Asparaginase Injection</h3>
+                                        <p className="text-primary font-medium text-base">Advanced Oncology Treatment</p>
                                     </div>
-                                    <p className="text-slate-600 mb-6 leading-relaxed">
+                                    <p className="text-slate-600 mb-6 leading-relaxed text-sm">
                                         Harnessing the power of pegylated L-asparaginase, this potent formulation targets cancer at its core. By depleting the levels of asparagine, an essential nutrient for cancer cell survival, it inhibits their growth and propagation.
                                     </p>
 
-                                    <h4 className="text-lg font-bold text-slate-900 mb-3">Key Benefits:</h4>
-                                    <ul className="space-y-3 mb-8 text-slate-600">
+                                    <h4 className="text-base font-bold text-slate-900 mb-2">Key Benefits:</h4>
+                                    <ul className="space-y-2 mb-6 text-slate-600 text-sm">
                                         <li className="flex items-start">
                                             <span className="mr-2 text-primary font-bold">•</span>
                                             <span><strong className="text-slate-800">Efficiency:</strong> Engineered to maximize anti-cancer impact and curtail malignant cell proliferation.</span>
@@ -123,27 +150,27 @@ const AnticancerDrugs = () => {
                                         </li>
                                     </ul>
 
-                                    <div className="grid grid-cols-2 gap-y-4 gap-x-8 border-t border-slate-100 pt-6">
+                                    <div className="grid grid-cols-2 gap-4 border-t border-slate-100 pt-6">
                                         <div>
-                                            <span className="block text-sm font-bold text-slate-900">Treatment</span>
+                                            <span className="block text-xs font-bold text-slate-900">Treatment</span>
                                             <span className="text-slate-600 text-sm">Acute Lymphocytic Leukemia</span>
                                         </div>
                                         <div>
-                                            <span className="block text-sm font-bold text-slate-900">Dosage Form</span>
+                                            <span className="block text-xs font-bold text-slate-900">Dosage Form</span>
                                             <span className="text-slate-600 text-sm">Injection (IV/IM)</span>
                                         </div>
                                         <div>
-                                            <span className="block text-sm font-bold text-slate-900">Packing</span>
+                                            <span className="block text-xs font-bold text-slate-900">Packing</span>
                                             <span className="text-slate-600 text-sm">Box</span>
                                         </div>
                                         <div>
-                                            <span className="block text-sm font-bold text-slate-900">Manufacturer</span>
+                                            <span className="block text-xs font-bold text-slate-900">Manufacturer</span>
                                             <span className="text-slate-600 text-sm">G J Pharmaceuticals LLP</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </section>
             </main>

@@ -29,23 +29,24 @@ const CardioCare = () => {
 
             <main className="flex-grow">
                 {/* Hero Section */}
-                <section className="relative pt-32 pb-20">
+                <section className="relative pt-24 pb-12">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
                             className="max-w-4xl mx-auto text-center"
                         >
-                            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
+                            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1.5 rounded-full mb-4">
                                 <HeartPulse className="w-4 h-4" />
                                 <span className="text-sm font-semibold">Cardiovascular Care</span>
                             </div>
 
-                            <h1 className="text-5xl font-bold text-slate-900 mb-6">
+                            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
                                 Cardio Care Products
                             </h1>
 
-                            <p className="text-xl text-slate-600 leading-relaxed">
+                            <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
                                 Comprehensive cardiovascular pharmaceutical solutions for heart health, blood pressure management, and circulatory system support.
                             </p>
                         </motion.div>
@@ -53,13 +54,19 @@ const CardioCare = () => {
                 </section>
 
                 {/* Product Table Section */}
-                <section className="py-20">
+                <section className="py-12">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-6xl mx-auto">
-                            <div className="bg-white/60 backdrop-blur-md rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                className="bg-white/60 backdrop-blur-md rounded-2xl shadow-lg border border-slate-200 overflow-hidden"
+                            >
                                 {/* Table Header */}
-                                <div className="bg-gradient-to-r from-secondary to-primary px-8 py-6">
-                                    <h2 className="text-2xl font-bold text-white">Cardio Care Product List</h2>
+                                <div className="bg-gradient-to-r from-secondary to-primary px-6 py-4">
+                                    <h2 className="text-xl font-bold text-white">Cardio Care Product List</h2>
                                 </div>
 
                                 {/* Table */}
@@ -67,10 +74,10 @@ const CardioCare = () => {
                                     <table className="w-full">
                                         <thead className="bg-secondary/5 border-b-2 border-slate-200">
                                             <tr>
-                                                <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">S.No.</th>
-                                                <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Product Name</th>
-                                                <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Strength</th>
-                                                <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Packing</th>
+                                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">S.No.</th>
+                                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Product Name</th>
+                                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Strength</th>
+                                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Packing</th>
                                             </tr>
                                         </thead>
                                         <tbody className="divide-y divide-slate-100">
@@ -79,27 +86,32 @@ const CardioCare = () => {
                                                     key={product.sno}
                                                     initial={{ opacity: 0, y: 10 }}
                                                     whileInView={{ opacity: 1, y: 0 }}
-                                                    viewport={{ once: true }}
-                                                    transition={{ delay: index * 0.02 }}
+                                                    viewport={{ once: true, margin: "-50px" }}
+                                                    transition={{ duration: 0.3, delay: index * 0.02 }}
                                                     className="hover:bg-primary/5 transition-colors"
                                                 >
-                                                    <td className="px-6 py-4 text-sm text-slate-600">{product.sno}</td>
-                                                    <td className="px-6 py-4 text-sm font-medium text-slate-900">{product.name}</td>
-                                                    <td className="px-6 py-4 text-sm text-slate-600">{product.strength}</td>
-                                                    <td className="px-6 py-4 text-sm text-slate-600">{product.packing}</td>
+                                                    <td className="px-4 py-3 text-sm text-slate-600">{product.sno}</td>
+                                                    <td className="px-4 py-3 text-sm font-medium text-slate-900">{product.name}</td>
+                                                    <td className="px-4 py-3 text-sm text-slate-600">{product.strength}</td>
+                                                    <td className="px-4 py-3 text-sm text-slate-600">{product.packing}</td>
                                                 </motion.tr>
                                             ))}
                                         </tbody>
                                     </table>
                                 </div>
-                            </div>
+                            </motion.div>
 
                             {/* Quality Note */}
-                            <div className="mt-8 bg-primary/5 rounded-xl p-6 border border-primary/20">
+                            <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="mt-6 bg-primary/5 rounded-xl p-4 border border-primary/20"
+                            >
                                 <p className="text-sm text-slate-700">
                                     <span className="font-semibold text-primary">Note:</span> All products are manufactured under WHO-GMP certified facilities with stringent quality control measures to ensure patient safety and therapeutic efficacy.
                                 </p>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </section>
@@ -160,39 +172,40 @@ const FeaturedProducts = () => {
     };
 
     return (
-        <section className="py-20 border-t border-slate-200">
+        <section className="py-12 border-t border-slate-200">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-12">
-                        <div className="inline-flex items-center justify-center p-2 bg-primary/10 rounded-full mb-4">
-                            <Activity className="w-6 h-6 text-primary" />
+                    <div className="text-center mb-8">
+                        <div className="inline-flex items-center justify-center p-2 bg-primary/10 rounded-full mb-3">
+                            <Activity className="w-5 h-5 text-primary" />
                         </div>
                         <h2 className="text-3xl font-bold text-slate-900">Featured Cardio Care Products</h2>
-                        <div className="w-20 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+                        <div className="w-16 h-1 bg-primary mx-auto mt-3 rounded-full"></div>
                     </div>
 
-                    <div className="space-y-6">
+                    <div className="space-y-4">
                         {products.slice(0, visibleCount).map((product, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition-all group"
+                                transition={{ duration: 0.4 }}
+                                className="bg-white rounded-xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-all group"
                             >
-                                <div className="flex flex-col gap-6">
+                                <div className="flex flex-col gap-4">
                                     <div>
-                                        <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">
+                                        <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">
                                             {product.name}
                                         </h3>
-                                        <p className="text-slate-600 leading-relaxed">
+                                        <p className="text-slate-600 leading-relaxed text-sm">
                                             {product.description}
                                         </p>
                                     </div>
                                     <div className="flex justify-start">
                                         <Link
                                             to={product.link}
-                                            className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-primary/10 text-primary font-semibold hover:bg-primary hover:text-white transition-all duration-300 whitespace-nowrap"
+                                            className="inline-flex items-center justify-center px-5 py-2 rounded-lg bg-primary/10 text-primary text-sm font-semibold hover:bg-primary hover:text-white transition-all duration-300 whitespace-nowrap"
                                         >
                                             Read More
                                             <ArrowRight className="w-4 h-4 ml-2" />
@@ -204,10 +217,10 @@ const FeaturedProducts = () => {
                     </div>
 
                     {visibleCount < products.length && (
-                        <div className="text-center mt-12">
+                        <div className="text-center mt-8">
                             <button
                                 onClick={handleLoadMore}
-                                className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gradient-to-r from-primary to-orange-400 text-white font-bold shadow-lg hover:shadow-orange-200 hover:scale-105 transition-all duration-300"
+                                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-primary to-orange-400 text-white font-bold text-sm shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
                             >
                                 Load More Products
                             </button>

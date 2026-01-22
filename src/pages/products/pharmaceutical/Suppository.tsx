@@ -31,47 +31,65 @@ const Suppository = () => {
         <div className="min-h-screen flex flex-col">
             <Navbar />
             <main className="flex-grow">
-                <section className="relative pt-32 pb-20">
+                <section className="relative pt-24 pb-12">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl mx-auto text-center">
-                            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="max-w-4xl mx-auto text-center"
+                        >
+                            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1.5 rounded-full mb-4">
                                 <Pill className="w-4 h-4" />
                                 <span className="text-sm font-semibold">Alternative Dosage Form</span>
                             </div>
-                            <h1 className="text-5xl font-bold text-slate-900 mb-6">Suppository Products</h1>
-                            <p className="text-xl text-slate-600 leading-relaxed">Specialized solid dosage forms for rectal and vaginal administration.</p>
+                            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Suppository Products</h1>
+                            <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">Specialized solid dosage forms for rectal and vaginal administration.</p>
                         </motion.div>
                     </div>
                 </section>
 
-                <section className="py-20">
+                <section className="py-12">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-6xl mx-auto">
-                            <div className="bg-white/60 backdrop-blur-md rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                                <div className="bg-gradient-to-r from-secondary to-primary px-8 py-6">
-                                    <h2 className="text-2xl font-bold text-white">Suppository Product List</h2>
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                className="bg-white/60 backdrop-blur-md rounded-2xl shadow-lg border border-slate-200 overflow-hidden"
+                            >
+                                <div className="bg-gradient-to-r from-secondary to-primary px-6 py-4">
+                                    <h2 className="text-xl font-bold text-white">Suppository Product List</h2>
                                 </div>
                                 <div className="overflow-x-auto">
                                     <table className="w-full">
                                         <thead className="bg-secondary/5 border-b-2 border-slate-200">
                                             <tr>
-                                                <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">S.No.</th>
-                                                <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Product Name</th>
-                                                <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Packing</th>
+                                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">S.No.</th>
+                                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Product Name</th>
+                                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Packing</th>
                                             </tr>
                                         </thead>
                                         <tbody className="divide-y divide-slate-100">
                                             {products.map((product, index) => (
-                                                <motion.tr key={product.sno} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.02 }} className="hover:bg-primary/5 transition-colors">
-                                                    <td className="px-6 py-4 text-sm text-slate-600">{product.sno}</td>
-                                                    <td className="px-6 py-4 text-sm font-medium text-slate-900">{product.name}</td>
-                                                    <td className="px-6 py-4 text-sm text-slate-600">{product.packing}</td>
+                                                <motion.tr
+                                                    key={product.sno}
+                                                    initial={{ opacity: 0, y: 10 }}
+                                                    whileInView={{ opacity: 1, y: 0 }}
+                                                    viewport={{ once: true, margin: "-50px" }}
+                                                    transition={{ duration: 0.3, delay: index * 0.02 }}
+                                                    className="hover:bg-primary/5 transition-colors"
+                                                >
+                                                    <td className="px-4 py-3 text-sm text-slate-600">{product.sno}</td>
+                                                    <td className="px-4 py-3 text-sm font-medium text-slate-900">{product.name}</td>
+                                                    <td className="px-4 py-3 text-sm text-slate-600">{product.packing}</td>
                                                 </motion.tr>
                                             ))}
                                         </tbody>
                                     </table>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </section>
